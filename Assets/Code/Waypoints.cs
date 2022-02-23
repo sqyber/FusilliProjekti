@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Waypoints : MonoBehaviour
 {
-
-    [SerializeField] private float waypointSize = 1f;
     private void OnDrawGizmos()
     {
         foreach (Transform t in transform)
