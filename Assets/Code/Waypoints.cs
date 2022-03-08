@@ -7,6 +7,7 @@ public class Waypoints : MonoBehaviour
 {
 
     [SerializeField] private float waypointSize = 1f;
+    [SerializeField] private Waypoints nextSystem;
     private void OnDrawGizmos()
     {
         foreach (Transform t in transform)
@@ -26,7 +27,7 @@ public class Waypoints : MonoBehaviour
 
     
     // doesn't work. only moves from 0 --> 1, not further.
-    public Transform GetNextWaypoint(Transform currentWaypoint)
+    public virtual Transform GetNextWaypoint(Transform currentWaypoint)
     {
         if (currentWaypoint == null)
         {
@@ -42,4 +43,11 @@ public class Waypoints : MonoBehaviour
             return transform.GetChild(0);
         }
     }
+
+    public Waypoints GetNextSystem()
+    {
+        return nextSystem;
+    }
+    
+    
 }

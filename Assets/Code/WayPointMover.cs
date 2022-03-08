@@ -30,6 +30,11 @@ public class WayPointMover : MonoBehaviour
         if (Vector2.Distance(transform.position, currentWaypoint.position) < 0.1)
         {
             currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint);
+            if (currentWaypoint == null)
+            {
+                waypoints = waypoints.GetNextSystem();
+                currentWaypoint = waypoints.GetNextWaypoint(null);
+            }
         }
     }
 }
