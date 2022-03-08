@@ -1,18 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
-public class LahioWaypoints : MonoBehaviour
+public class LahioWaypoints : Waypoints
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    System.Random rnd = new System.Random();
+    
+    public override Transform GetNextWaypoint(Transform currentWaypoint)
     {
+        // the cap of houses +1 --> 6 max = 5 houses
+        int housenumber = rnd.Next(1, 6);
         
-    }
+        if (currentWaypoint.GetSiblingIndex() == 0)
+        {
+            return transform.GetChild(housenumber);
+        }
+        else
+        {
+            //wait for button
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            return transform.GetChild(0);
+        }
     }
 }
+
