@@ -24,9 +24,7 @@ public class Waypoints : MonoBehaviour
         //go to first child
         Gizmos.DrawLine(transform.GetChild(transform.childCount -1).position, transform.GetChild(0).position);
     }
-
     
-    // doesn't work. only moves from 0 --> 1, not further.
     public virtual Transform GetNextWaypoint(Transform currentWaypoint)
     {
         if (currentWaypoint == null)
