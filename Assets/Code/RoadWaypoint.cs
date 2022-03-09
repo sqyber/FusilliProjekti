@@ -10,7 +10,7 @@ public class RoadWaypoint : Waypoints
     // 
     public override Transform GetNextWaypoint(Transform currentWaypoint)
     {
-
+ 
         if (currentWaypoint == null)
         {
             return transform.GetChild(0);
