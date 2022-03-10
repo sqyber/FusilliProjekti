@@ -27,7 +27,7 @@ public class LahioWaypoints : Waypoints
         }
         else
         {
-            return transform.GetChild(0);
+            return null;
         }
     }
 }
