@@ -12,7 +12,6 @@ public class CameraMovement : MonoBehaviour
     
     // This is used to calculate the new camera position
     Vector3 camera_position = Vector3.zero;
-    float z = 0.0f;
 
     void Update(){
         // Detection for the initial tap, for taking information
