@@ -1534,7 +1534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: {fileID: 2103014426}
-  moveSpeed: 10
+  moveSpeed: 5
 --- !u!4 &2116012967
 Transform:
   m_ObjectHideFlags: 0

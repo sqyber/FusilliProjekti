@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaypointMover : MonoBehaviour
+public class WayPointMover : MonoBehaviour
 {
     
     // reference to the waypoint system
