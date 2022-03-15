@@ -20,7 +20,7 @@ public class LahioWaypoints : Waypoints
 
        if (currentWaypoint == null)
        {
-           //wait for button
+           //Move to first waypoint
 
            return transform.GetChild(0);
        }

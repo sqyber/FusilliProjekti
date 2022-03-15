@@ -13,15 +13,18 @@ public class RoadWaypoint : Waypoints
  
         if (currentWaypoint == null)
         {
+            //First waypoint
             return transform.GetChild(0);
         }
         
         if (currentWaypoint.GetSiblingIndex() < transform.childCount - 1)
         {
+            //Moves to next child in waypoint tree
             return transform.GetChild(currentWaypoint.GetSiblingIndex() + 1);
         }
         else if (currentWaypoint.GetSiblingIndex() == transform.childCount -1)
         {
+            //Changes the waypoint rail
             GetNextSystem();
         }
         
