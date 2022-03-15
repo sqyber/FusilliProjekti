@@ -6,7 +6,14 @@ using UnityEngine;
 public class Waypoints : MonoBehaviour
 {
     [SerializeField] private Waypoints nextSystem;
+    protected bool delivered;
+    public bool IsDelivered
+    {
+        get { return delivered; }
+    }
+    
     private void OnDrawGizmos()
+
     {
         foreach (Transform t in transform)
         {
@@ -44,6 +51,9 @@ public class Waypoints : MonoBehaviour
     {
         return nextSystem;
     }
-    
-    
+
+    public void ResetDelivered()
+    {
+        delivered = false;
+    }
 }

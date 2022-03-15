@@ -7,8 +7,10 @@ using UnityEngine;
 public class LahioWaypoints : Waypoints
 {
     
+    // TODO enum lähetin tilasta ja yhdistä switch case rakenteeseen.
+    // TODO kolmeen vaiheeseen eri tilat switchiin.
     System.Random rnd = new System.Random();
-    bool delivered;
+    
     
     public override Transform GetNextWaypoint(Transform currentWaypoint)
     {
@@ -17,6 +19,7 @@ public class LahioWaypoints : Waypoints
        // marks for lahetti to move to next rail
        
 
+       
 
        if (currentWaypoint == null)
        {
@@ -27,24 +30,25 @@ public class LahioWaypoints : Waypoints
 
        if (currentWaypoint.GetSiblingIndex() == 0 && !delivered)
        {
-           
+           delivered = true;
+
            //pick random house 
            return transform.GetChild(housenumber);
+           
 
            
+       }
+       else if (currentWaypoint.GetSiblingIndex() == 0 && delivered)
+       {
+           return null;
        }
        if (currentWaypoint.GetSiblingIndex() != 0)
        {
            //change bool to mark delivery done and prepare for next waypoint system
-           delivered = true;
            return transform.GetChild(0);
        }
 
-       if (delivered)
-       {
-           GetNextSystem();
-           delivered = false;
-       }
+       
        
        return null;
     }
