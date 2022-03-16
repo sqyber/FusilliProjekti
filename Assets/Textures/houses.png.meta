@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 454efec64d18e234eade6bcc5928e63b
+guid: 58d50bffe517d974c83a940e7f4d9325
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8130399727500597356
-    second: maa_0
+      213: 584374925798354339
+    second: houses_0
   - first:
-      213: -4628324901935653052
-    second: maa_1
+      213: -3298002869832431796
+    second: houses_1
   - first:
-      213: 3198307961213532446
-    second: maa_2
+      213: -1538702627613937882
+    second: houses_2
   - first:
-      213: 806828421313938621
-    second: maa_3
+      213: -7348991793363323239
+    second: houses_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: maa_0
+      name: houses_0
       rect:
         serializedVersion: 2
         x: 0
@@ -129,14 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 497e46846840b2f80800000000000000
-      internalID: -8130399727500597356
+      spriteID: 3ad2bdb16ed1c1800800000000000000
+      internalID: 584374925798354339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: maa_1
+      name: houses_1
       rect:
         serializedVersion: 2
         x: 32
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44fd70b0603e4cfb0800000000000000
-      internalID: -4628324901935653052
+      spriteID: c474b6b0dd32b32d0800000000000000
+      internalID: -3298002869832431796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: maa_2
+      name: houses_2
       rect:
         serializedVersion: 2
         x: 0
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e19bf66352ca26c20800000000000000
-      internalID: 3198307961213532446
+      spriteID: 62f6c12dc1e65aae0800000000000000
+      internalID: -1538702627613937882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: maa_3
+      name: houses_3
       rect:
         serializedVersion: 2
         x: 32
@@ -192,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db44b17ac2e623b00800000000000000
-      internalID: 806828421313938621
+      spriteID: 996715b86e2230a90800000000000000
+      internalID: -7348991793363323239
       vertices: []
       indices: 
       edges: []

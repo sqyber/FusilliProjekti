@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 96297024bc86f904687072079d796c3b
+guid: 554be9e99f797534a88106f7630bf060
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3846708949402283074
-    second: kerrostalot_0
+      213: -3878557786174838139
+    second: ground_0
   - first:
-      213: -6110967927893427860
-    second: kerrostalot_1
+      213: -4419227343285247731
+    second: ground_1
+  - first:
+      213: -1977380741081267030
+    second: ground_2
+  - first:
+      213: 2270332835960527861
+    second: ground_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,7 +115,49 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kerrostalot_0
+      name: ground_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a29323e389c2ac0800000000000000
+      internalID: -3878557786174838139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d012ac53520cba2c0800000000000000
+      internalID: -4419227343285247731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground_2
       rect:
         serializedVersion: 2
         x: 0
@@ -123,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb39f8c579ebd9ac0800000000000000
-      internalID: -3846708949402283074
+      spriteID: aa4072e41beee84e0800000000000000
+      internalID: -1977380741081267030
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kerrostalot_1
+      name: ground_3
       rect:
         serializedVersion: 2
         x: 32
@@ -144,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c697b100c0b713ba0800000000000000
-      internalID: -6110967927893427860
+      spriteID: 5fb15518fa7d18f10800000000000000
+      internalID: 2270332835960527861
       vertices: []
       indices: 
       edges: []
