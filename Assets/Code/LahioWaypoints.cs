@@ -11,7 +11,12 @@ public class LahioWaypoints : Waypoints
     // TODO kolmeen vaiheeseen eri tilat switchiin.
     System.Random rnd = new System.Random();
     
-    
+    public enum Status
+    {
+        Arrived,
+        Delivered,
+        Leaving
+    }
     
 
     public override Transform GetNextWaypoint(Transform currentWaypoint)
@@ -34,8 +39,8 @@ public class LahioWaypoints : Waypoints
         {
             delivered = true;
 
-            //pick random house 
-            return transform.GetChild(housenumber);
+            //pick random house
+            //return transform.GetChild(housenumber);
 
 
 
@@ -54,12 +59,7 @@ public class LahioWaypoints : Waypoints
         return null;
     }
 
-    public enum Status
-    {
-        Arrived,
-        Delivered,
-        Leaving
-    }
+  
 
     public Transform Delivery(Transform currentWaypoint, Status statuscheck){
         int housenumber = rnd.Next(1, transform.childCount);
