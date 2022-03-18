@@ -37,11 +37,10 @@ public class LahioWaypoints : Waypoints
         {
             //Move to first waypoint
             lahetti = Status.Arriving;
-            return transform.GetChild(0);
+            //return transform.GetChild(0);
             
 
         }
-        
 
         if (currentWaypoint.GetSiblingIndex() == 0 && lahetti != Status.Delivered )
         {
@@ -86,7 +85,6 @@ public class LahioWaypoints : Waypoints
                 IsDelivered = true;
                 // go to random house
                 return transform.GetChild(housenumber);
-                
             
             case Status.Delivered:
                 
