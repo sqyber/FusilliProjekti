@@ -37,7 +37,7 @@ public class LahioWaypoints : Waypoints
         {
             //Move to first waypoint
             lahetti = Status.Arriving;
-            //return transform.GetChild(0);
+            return transform.GetChild(0);
             
 
         }
