@@ -22,15 +22,15 @@ public class RoadWaypoint : Waypoints
             //Moves to next child in waypoint tree
             return transform.GetChild(currentWaypoint.GetSiblingIndex() + 1);
         }
-        else if (currentWaypoint.GetSiblingIndex() == transform.childCount -1)
+        if (currentWaypoint.GetSiblingIndex() == transform.childCount -1)
         {
             //Changes the waypoint rail
             GetNextSystem();
         }
         
-        {
-            //move to the next waypoint system
-            return null;
-        } 
+        
+        //move to the next waypoint system
+        return null;
+         
     }
 }

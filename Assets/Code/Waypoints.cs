@@ -10,8 +10,9 @@ public class Waypoints : MonoBehaviour
     public bool IsDelivered
     {
         get { return delivered; }
+        set => delivered = true;
     }
-    
+
     private void OnDrawGizmos()
 
     {
