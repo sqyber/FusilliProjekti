@@ -8,7 +8,7 @@ public class RoadWaypoint : Waypoints
 
 
     // 
-    public override Transform GetNextWaypoint(Transform currentWaypoint)
+    public override Transform GetNextWaypoint(Transform currentWaypoint, Status statuscheck)
     {
  
         if (currentWaypoint == null)

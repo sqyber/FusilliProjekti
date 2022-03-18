@@ -17,11 +17,11 @@ public class WayPointMover : MonoBehaviour
     void Start()
     {
         //set initial position to the first waypoint
-        currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint);
+        currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint, Status.None);
         transform.position = currentWaypoint.position;
         
         //set the next waypoint target
-        currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint);
+        currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint, Status.None);
         
         delivered.gameObject.SetActive(false);
     }
@@ -44,12 +44,12 @@ public class WayPointMover : MonoBehaviour
                 IsMoving = false;
                 delivered.gameObject.SetActive(true);
             }
-            currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint);
+            currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint, Status.None);
             
             if (currentWaypoint == null)
             {
                 waypoints = waypoints.GetNextSystem();
-                currentWaypoint = waypoints.GetNextWaypoint(null);
+                currentWaypoint = waypoints.GetNextWaypoint(null, Status.None);
               
                 
                 }

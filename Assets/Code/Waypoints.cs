@@ -30,7 +30,7 @@ public class Waypoints : MonoBehaviour
         Gizmos.DrawLine(transform.GetChild(transform.childCount -1).position, transform.GetChild(0).position);
     }
     
-    public virtual Transform GetNextWaypoint(Transform currentWaypoint)
+    public virtual Transform GetNextWaypoint(Transform currentWaypoint, Status statuscheck)
     {
         if (currentWaypoint == null)
         {
