@@ -1,67 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class SpawnAndDestroy : MonoBehaviour
 {
     // define the delivery guy object
     [SerializeField] private GameObject deliverer;
 
+    // A GameObject that is used to clone the original deliverer
     private GameObject spawnedDeliverer;
-    private GameObject spawnedDeliverer2;
-    private GameObject spawnedDeliverer3;
-    
+
+    // Initializing a list for deliverers
+    private List<GameObject> deliverers = new List<GameObject>();
+
     // spawn deliverers
     public void Spawn()
     {
-        // check if there is a 2nd deliverer already, if yes then spawn third with identifier for 
-        // being the third one
-        if (spawnedDeliverer2 != null)
-        {
-            spawnedDeliverer3 = Instantiate(deliverer, transform.position, Quaternion.identity);
-            spawnedDeliverer3.SetActive(true);
-            return;
-        }
+        // set and spawn spawnedDeliverer as a clone of deliverer
+        spawnedDeliverer = Instantiate(deliverer, transform.position, Quaternion.identity);
         
-        // check if there is a deliverer already, if yes then spawn second with identifier for 
-        // being the second one
-        if (spawnedDeliverer != null)
-        {
-            spawnedDeliverer2 = Instantiate(deliverer, transform.position, Quaternion.identity);
-            spawnedDeliverer2.SetActive(true);
-            return;
-        }
+        // add the spawnedDeliverer to the list initialized earlier
+        deliverers.Add(spawnedDeliverer);
         
-        // check if there is a deliverer, if not then spawn one with identifier for being
-        // the first one
-        if (spawnedDeliverer == null)
-        {
-            spawnedDeliverer = Instantiate(deliverer, transform.position, Quaternion.identity);
-            spawnedDeliverer.SetActive(true);
-        }
+        // set the deliverer active
+        deliverers[deliverers.Count - 1].SetActive(true);
     }
     
     // despawn the last deliverer that was spawned
     public void DespawnLast()
     {
-        // check if a third deliverer exists, then delete it and return
-        if (spawnedDeliverer3 != null)
+        // Check if lists index value is below zero, if yes then return
+        // otherwise destroy the last object in the list
+        if (deliverers.Count - 1 < 0)
         {
-            Destroy(spawnedDeliverer3.gameObject);
             return;
         }
+        Destroy(deliverers[deliverers.Count - 1]);
+        deliverers.RemoveAt(deliverers.Count - 1);
+        spawnedDeliverer = null;
         
-        // check if a second deliverer exists, then delete it and return
-        if (spawnedDeliverer2 != null)
-        {
-            Destroy(spawnedDeliverer2.gameObject);
-            return;
-        }
-        
-        // check if a deliverer exists, then delete it
-        if (spawnedDeliverer != null)
-        {
-            Destroy(spawnedDeliverer.gameObject);
-        }
     }
 }
