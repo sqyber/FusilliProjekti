@@ -14,7 +14,7 @@ public class CameraMovement : MonoBehaviour
     Vector3 camera_position = Vector3.zero;
 
     void Update(){
-        // Detection for the initial tap, for taking information
+        // Detection for the initial tap and storing the information
         if(Input.GetMouseButtonDown(0)){
             hit_position = Input.mousePosition;
             camera_position = transform.position;
