@@ -14,7 +14,7 @@ public class SpawnAndDestroy : MonoBehaviour
     // Initializing a list for deliverers
     private List<GameObject> deliverers = new List<GameObject>();
     
-    [HideInInspector] public ScoreManager scoreManagerBlue;
+    private ScoreManager scoreManagerBlue;
 
     [SerializeField] private int logisticsCap = 5;
     

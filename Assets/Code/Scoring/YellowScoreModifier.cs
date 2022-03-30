@@ -5,6 +5,8 @@ using UnityEngine;
 public class YellowScoreModifier : MonoBehaviour
 {
     ScoreManager scoreManagerYellow;
+
+    private int score = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,6 @@ public class YellowScoreModifier : MonoBehaviour
     // Used to add YellowScore (used as the secondary main score)
     public void AddScore()
     {
-        scoreManagerYellow.YellowScore++;
+        scoreManagerYellow.YellowScore += score;
     }
 }

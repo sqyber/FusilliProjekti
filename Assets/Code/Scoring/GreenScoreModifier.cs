@@ -5,6 +5,8 @@ using UnityEngine;
 public class GreenScoreModifier : MonoBehaviour
 {
     ScoreManager scoreManagerGreen;
+    
+    private int score = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,6 @@ public class GreenScoreModifier : MonoBehaviour
     // Method to add GreenScore (used for the main score to track unlocks)
     public void AddScore()
     {
-        scoreManagerGreen.GreenScore++;
+        scoreManagerGreen.GreenScore += score;
     }
 }
