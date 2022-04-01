@@ -22,13 +22,13 @@ public class SpawnAndDestroy : MonoBehaviour
     void Start()
     {
         scoreManagerBlue = FindObjectOfType<ScoreManager>();
-        scoreManagerBlue.BlueScore = PlayerPrefs.GetInt("BlueScore", 0);
+        scoreManagerBlue.BlueScore = logisticsCap;
     }
 
     // spawn deliverers
     public void Spawn()
     {
-        if (scoreManagerBlue.BlueScore < logisticsCap)
+        if (scoreManagerBlue.BlueScore > 0)
         {
         // set and spawn spawnedDeliverer as a clone of deliverer
         spawnedDeliverer = Instantiate(deliverer, transform.position, Quaternion.identity);
@@ -40,7 +40,7 @@ public class SpawnAndDestroy : MonoBehaviour
         deliverers[deliverers.Count - 1].SetActive(true);
         
         // add logistics score by one to track deliverers on the UI
-        scoreManagerBlue.BlueScore++;
+        scoreManagerBlue.BlueScore--;
         }
     }
     
@@ -54,14 +54,14 @@ public class SpawnAndDestroy : MonoBehaviour
             return;
         }
 
-        if (scoreManagerBlue.BlueScore > 0)
+        if (scoreManagerBlue.BlueScore < logisticsCap)
         {
             Destroy(deliverers[deliverers.Count - 1]);
             deliverers.RemoveAt(deliverers.Count - 1);
             spawnedDeliverer = null;
             
             // reduce logistics score to track the amount of deliverers on the UI
-            scoreManagerBlue.BlueScore--;
+            scoreManagerBlue.BlueScore++;
         }
     }
 }

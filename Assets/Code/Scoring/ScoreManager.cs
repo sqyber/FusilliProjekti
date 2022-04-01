@@ -14,7 +14,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI yellowScoreDisplay;
     private int Gscore = 0;
-    private int Bscore = 0;
+    private int Bscore = 5;
     private int Yscore = 0;
 
     // Setting the private GScore value with the GreenScore value to protect the value
@@ -37,7 +37,6 @@ public class ScoreManager : MonoBehaviour
             {
                 Bscore = value;
                 blueScoreDisplay.text = Bscore.ToString();
-                PlayerPrefs.SetInt("BlueScore", Bscore);
             }
         }
         
