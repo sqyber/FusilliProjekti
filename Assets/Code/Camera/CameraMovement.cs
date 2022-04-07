@@ -4,45 +4,60 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
+    // These are used to prevent camera movement while a menu is open.
+    [SerializeField] private GameObject helpMenu;
+    [SerializeField] private GameObject spawnMenu;
+    
     // This is used to store the information of the initial tap
-    Vector3 hit_position = Vector3.zero;
+    Vector2 hit_position = Vector2.zero;
     
     // This is used to store the information of the current camera position
-    Vector3 current_position = Vector3.zero;
+    Vector2 current_position = Vector2.zero;
     
     // This is used to calculate the new camera position
-    Vector3 camera_position = Vector3.zero;
+    Vector2 camera_position = Vector2.zero;
 
-    void Update(){
+    private void Update()
+    {
+        // Check if either of the menus is active, if yes then return
+        if (helpMenu.activeSelf || spawnMenu.activeSelf)
+        {
+            return;
+        }
+        
         // Detection for the initial tap and storing the information
-        if(Input.GetMouseButtonDown(0)){
+        if(Input.GetMouseButtonDown(0))
+        {
             hit_position = Input.mousePosition;
             camera_position = transform.position;
-
         }
         
         // Detection for holding finger on the screen, if held go on to drag method
-        if(Input.GetMouseButton(0)){
+        if(Input.GetMouseButton(0))
+        {
             current_position = Input.mousePosition;
-            LeftMouseDrag();        
+            LeftMouseDrag();
         }
     }
 
     // Drag method for holding finger down on screen
-    void LeftMouseDrag(){
-        current_position.z = hit_position.z = camera_position.y;
-
+    private void LeftMouseDrag()
+    {
         // Get direction of movement.
         if (Camera.main != null)
         {
-            Vector3 direction = Camera.main.ScreenToWorldPoint(current_position) - Camera.main.ScreenToWorldPoint(hit_position);
+            Vector2 direction = Camera.main.ScreenToWorldPoint(current_position) - Camera.main.ScreenToWorldPoint(hit_position);
 
             // Invert direction
             direction = direction * -1;
 
-            Vector3 position = camera_position + direction;
+            Vector2 position = camera_position + direction;
 
-            transform.position = position;
+            // Using Clamp to limit cameras movement to the gamearea boundaries
+            transform.position = new Vector3(
+                Mathf.Clamp(position.x, -33.65f, -1.82f),
+                Mathf.Clamp(position.y, -29.2f, -8.6f),
+                -13.74f);
         }
     }
 }

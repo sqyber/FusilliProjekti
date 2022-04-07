@@ -6,7 +6,7 @@ public class BlueScoreModifier : MonoBehaviour
 {
     public ScoreManager scoreManagerBlue;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         scoreManagerBlue = FindObjectOfType<ScoreManager>();
         scoreManagerBlue.BlueScore = PlayerPrefs.GetInt("BlueScore", 0);

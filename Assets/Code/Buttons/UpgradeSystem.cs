@@ -6,10 +6,12 @@ using UnityEngine;
 
 public class UpgradeSystem : MonoBehaviour
 {
+    [SerializeField] private GameObject button;
+    
     public GameObject[] levels;
     private int current_level = 0;
 
-    public void Start()
+    private void Start()
     {
         SwitchObject(current_level);
     }
@@ -20,10 +22,11 @@ public class UpgradeSystem : MonoBehaviour
         {
             current_level++;
             SwitchObject(current_level);
+            button.SetActive(false);
         }
     }
 
-    void SwitchObject(int lvl)
+    private void SwitchObject(int lvl)
         {
             for (int i = 0; i < levels.Length; i++)
             {

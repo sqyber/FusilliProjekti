@@ -19,7 +19,7 @@ public class SpawnAndDestroy : MonoBehaviour
     [SerializeField] private int logisticsCap = 5;
     
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         scoreManagerBlue = FindObjectOfType<ScoreManager>();
         scoreManagerBlue.BlueScore = logisticsCap;

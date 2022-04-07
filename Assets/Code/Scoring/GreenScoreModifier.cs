@@ -8,7 +8,7 @@ public class GreenScoreModifier : MonoBehaviour
     
     private int score = 10;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         scoreManagerGreen = FindObjectOfType<ScoreManager>();
         scoreManagerGreen.GreenScore = PlayerPrefs.GetInt("GreenScore", 0);
