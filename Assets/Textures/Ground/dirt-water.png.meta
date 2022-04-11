@@ -1,19 +1,34 @@
 fileFormatVersion: 2
-guid: 3edb9be6341e00543bdb0da3508e5fad
+guid: 567e80b5e6519f24e912b6cfe009e080
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3803312841823279553
-    second: asphaltTurns_0
+      213: 136084575833912777
+    second: dirt-water_0
   - first:
-      213: -7254103557819699146
-    second: asphaltTurns_1
+      213: -60206245588187780
+    second: dirt-water_1
   - first:
-      213: 6683613655700529628
-    second: asphaltTurns_2
+      213: 6799623991950961676
+    second: dirt-water_2
   - first:
-      213: 6507051879628705620
-    second: asphaltTurns_3
+      213: 6874223987430131793
+    second: dirt-water_3
+  - first:
+      213: -1672149658305878728
+    second: dirt-water_4
+  - first:
+      213: 1614792642742778482
+    second: dirt-water_5
+  - first:
+      213: -7126010245881570592
+    second: dirt-water_6
+  - first:
+      213: -6458682812450330512
+    second: dirt-water_7
+  - first:
+      213: -4465606786769199821
+    second: dirt-water_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,7 +130,70 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: asphaltTurns_0
+      name: dirt-water_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c57df1633873e100800000000000000
+      internalID: 136084575833912777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dirt-water_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75c4761dba1a2ff0800000000000000
+      internalID: -60206245588187780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dirt-water_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ce576aefd1d5e50800000000000000
+      internalID: 6799623991950961676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dirt-water_3
       rect:
         serializedVersion: 2
         x: 0
@@ -129,14 +207,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c9de8af0e418c430800000000000000
-      internalID: 3803312841823279553
+      spriteID: 1580e3d9b46266f50800000000000000
+      internalID: 6874223987430131793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: asphaltTurns_1
+      name: dirt-water_4
       rect:
         serializedVersion: 2
         x: 32
@@ -150,14 +228,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63072408f3f345b90800000000000000
-      internalID: -7254103557819699146
+      spriteID: 8352365ceb45bc8e0800000000000000
+      internalID: -1672149658305878728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: asphaltTurns_2
+      name: dirt-water_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27af8906a55e86610800000000000000
+      internalID: 1614792642742778482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dirt-water_6
       rect:
         serializedVersion: 2
         x: 0
@@ -171,14 +270,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd1eaf36537f0cc50800000000000000
-      internalID: 6683613655700529628
+      spriteID: 0ea5f64cf635b1d90800000000000000
+      internalID: -7126010245881570592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: asphaltTurns_3
+      name: dirt-water_7
       rect:
         serializedVersion: 2
         x: 32
@@ -192,8 +291,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45f8e4c6531bd4a50800000000000000
-      internalID: 6507051879628705620
+      spriteID: 0782afe93362e56a0800000000000000
+      internalID: -6458682812450330512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dirt-water_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d5c08894af602c0800000000000000
+      internalID: -4465606786769199821
       vertices: []
       indices: 
       edges: []
