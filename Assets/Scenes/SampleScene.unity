@@ -6608,10 +6608,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeButton1: {fileID: 1258406423}
   upgradeButton2: {fileID: 566800450}
-  building: {fileID: 513922501}
   scoreManager: {fileID: 1675763622}
   thresholdOneValue: 0
   thresholdTwoValue: 0
+  scoreModifierLvl1: 1
+  scoreModifierLvl2: 1
   levels:
   - {fileID: 222370904}
   - {fileID: 1861664504}
@@ -13511,10 +13512,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeButton1: {fileID: 1900499858}
   upgradeButton2: {fileID: 1918143832}
-  building: {fileID: 1135021406}
   scoreManager: {fileID: 1675763622}
   thresholdOneValue: 0
   thresholdTwoValue: 0
+  scoreModifierLvl1: 1
+  scoreModifierLvl2: 1
   levels:
   - {fileID: 1455423167}
   - {fileID: 727541378}
@@ -15202,10 +15204,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeButton1: {fileID: 843644039}
   upgradeButton2: {fileID: 290022529}
-  building: {fileID: 1308876695}
   scoreManager: {fileID: 1675763622}
   thresholdOneValue: 0
   thresholdTwoValue: 0
+  scoreModifierLvl1: 1
+  scoreModifierLvl2: 1
   levels:
   - {fileID: 749246553}
   - {fileID: 726704802}
@@ -35562,10 +35565,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeButton1: {fileID: 1663028652}
   upgradeButton2: {fileID: 1259278411}
-  building: {fileID: 1371518294}
   scoreManager: {fileID: 1675763622}
   thresholdOneValue: 0
   thresholdTwoValue: 0
+  scoreModifierLvl1: 1
+  scoreModifierLvl2: 1
   levels:
   - {fileID: 351914666}
   - {fileID: 648004782}
@@ -36031,10 +36035,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeButton1: {fileID: 1327537508}
   upgradeButton2: {fileID: 1980553336}
-  building: {fileID: 1432149415}
   scoreManager: {fileID: 1675763622}
   thresholdOneValue: 15
   thresholdTwoValue: 20
+  scoreModifierLvl1: 1.2
+  scoreModifierLvl2: 1.4
   levels:
   - {fileID: 500153767}
   - {fileID: 647334374}
@@ -43894,6 +43899,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282ae26f346a7b342a5c26733e537b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  henhouse: {fileID: 513922501}
+  garden: {fileID: 1135021406}
+  farm: {fileID: 1371518294}
+  greenhouse: {fileID: 1432149415}
+  roofgarden: {fileID: 1308876695}
 --- !u!114 &1929909040
 MonoBehaviour:
   m_ObjectHideFlags: 0

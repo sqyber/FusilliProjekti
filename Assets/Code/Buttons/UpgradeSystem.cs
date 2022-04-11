@@ -2,17 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class UpgradeSystem : MonoBehaviour
 {
     // The upgrade buttons of the building
     [SerializeField] private GameObject upgradeButton1;
     [SerializeField] private GameObject upgradeButton2;
-    
-    // The building that is being upgraded and modified
-    [SerializeField] private GameObject building;
-    
+
     // ScoreManager is used to track all scores, and here it is
     // used to receive the value of the yellow score
     [SerializeField] private GameObject scoreManager;
@@ -21,6 +20,13 @@ public class UpgradeSystem : MonoBehaviour
     [SerializeField] private int thresholdOneValue;
     [SerializeField] private int thresholdTwoValue;
     
+    // Scoremodifiers that increase the score gained after upgrades
+    [SerializeField] private float scoreModifierLvl1 = 1;
+    [SerializeField] private float scoreModifierLvl2 = 1;
+    
+    // Used to track the scoremodifier given by level and sent onward to be used in another script
+    private float scoreModifier = 1;
+
     // Bools to track if scorethreshold has been achieved
     private bool thresholdOne = false;
     private bool thresholdTwo = false;
@@ -31,6 +37,11 @@ public class UpgradeSystem : MonoBehaviour
     public int current_lvl
     {
         get { return current_level; }
+    }
+
+    public float scoreMod
+    {
+        get { return scoreModifier; }
     }
 
     private void Start()
@@ -51,6 +62,7 @@ public class UpgradeSystem : MonoBehaviour
         {
             current_level++;
             SwitchObject(current_level);
+            UpdateModifier();
             upgradeButton1.SetActive(false);
             upgradeButton2.SetActive(false);
         }
@@ -88,7 +100,7 @@ public class UpgradeSystem : MonoBehaviour
     // Method to activate button 1
     private void ActivateButton()
     {
-        if (thresholdOne && building.GetComponent<UpgradeSystem>().current_lvl == 0)
+        if (thresholdOne && current_lvl == 0)
         {
             upgradeButton1.SetActive(true);
         }
@@ -97,9 +109,21 @@ public class UpgradeSystem : MonoBehaviour
     // Method to activate button 2
     private void ActivateButton2()
     {
-        if (thresholdTwo && building.GetComponent<UpgradeSystem>().current_lvl == 1)
+        if (thresholdTwo && current_lvl == 1)
         {
             upgradeButton2.SetActive(true);
+        }
+    }
+
+    private void UpdateModifier()
+    {
+        if (current_lvl == 1)
+        {
+            scoreModifier = scoreModifierLvl1;
+        }
+        else if (current_lvl == 2)
+        {
+            scoreModifier = scoreModifierLvl2;
         }
     }
 }

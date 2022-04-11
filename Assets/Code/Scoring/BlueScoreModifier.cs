@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlueScoreModifier : MonoBehaviour
 {
-    public ScoreManager scoreManagerBlue;
+    private ScoreManager scoreManagerBlue;
     // Start is called before the first frame update
     private void Start()
     {

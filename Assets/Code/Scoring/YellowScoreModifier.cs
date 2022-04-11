@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class YellowScoreModifier : MonoBehaviour
 {
-    ScoreManager scoreManagerYellow;
+    private ScoreManager scoreManagerYellow;
 
     private int score = 3;
 
@@ -15,7 +15,7 @@ public class YellowScoreModifier : MonoBehaviour
         scoreManagerYellow.YellowScore = PlayerPrefs.GetInt("YellowScore", 0);
     }
 
-    // Used to add YellowScore (used as the secondary main score)
+    // Used to add YellowScore (used as the secondary main score to get upgradeable buildings)
     public void AddScore()
     {
         scoreManagerYellow.YellowScore += score;
