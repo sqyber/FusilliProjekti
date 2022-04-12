@@ -7,22 +7,22 @@ public class WayPointMover : MonoBehaviour
 {
     
     // reference to the waypoint system
-    [SerializeField] private GameObject lahettiStatusCheck;
     [SerializeField] private Waypoints waypoints;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private Button delivered;
     private Transform currentWaypoint;
     private bool IsMoving = true;
     
+    public Status lahetti;
     
     void Start()
     {
         //set initial position to the first waypoint
-        currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint, Status.None);
+        currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint, ref lahetti);
         transform.position = currentWaypoint.position;
         
         //set the next waypoint target
-        currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint, Status.None);
+        currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint, ref lahetti);
         
         delivered.gameObject.SetActive(false);
     }
@@ -40,22 +40,20 @@ public class WayPointMover : MonoBehaviour
         if (Vector2.Distance(transform.position, currentWaypoint.position) < 0.1)
         {
             
-            if (lahettiStatusCheck.GetComponent<LahioWaypoints>().lahetti == Status.Delivered)
+            if (lahetti == Status.Delivered)
             {
                 IsMoving = false;
                 delivered.gameObject.SetActive(true);
             }
-            currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint, Status.None);
+            
+            currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint, ref lahetti);
             
             if (currentWaypoint == null)
             {
                 waypoints = waypoints.GetNextSystem();
-                currentWaypoint = waypoints.GetNextWaypoint(null, Status.None);
-              
-                
-                }
+                currentWaypoint = waypoints.GetNextWaypoint(null, ref lahetti);
+            }
         }
-        
     }
 
     public void OnDelivered()

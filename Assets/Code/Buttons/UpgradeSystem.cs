@@ -8,13 +8,15 @@ using Debug = UnityEngine.Debug;
 
 public class UpgradeSystem : MonoBehaviour
 {
-    // The upgrade buttons of the building
-    [SerializeField] private GameObject upgradeButton1;
-    [SerializeField] private GameObject upgradeButton2;
+    // The upgrade button of the building
+    [SerializeField] private GameObject upgradeButton;
 
     // ScoreManager is used to track all scores, and here it is
     // used to receive the value of the yellow score
     [SerializeField] private GameObject scoreManager;
+
+    // Used to access the saved level of the building
+    [SerializeField] private GameObject building;
     
     // Scorethresholds for upgrades
     [SerializeField] private int thresholdOneValue;
@@ -32,7 +34,7 @@ public class UpgradeSystem : MonoBehaviour
     private bool thresholdTwo = false;
     
     public GameObject[] levels;
-    private int current_level = 0;
+    private int current_level;
 
     public int current_lvl
     {
@@ -46,6 +48,7 @@ public class UpgradeSystem : MonoBehaviour
 
     private void Start()
     {
+        current_level = building.GetComponent<saveLevel>().lvlOfBuilding;
         SwitchObject(current_level);
     }
 
@@ -53,7 +56,6 @@ public class UpgradeSystem : MonoBehaviour
     {
         CheckScore();
         ActivateButton();
-        ActivateButton2();
     }
 
     public void Upgrade()
@@ -63,8 +65,7 @@ public class UpgradeSystem : MonoBehaviour
             current_level++;
             SwitchObject(current_level);
             UpdateModifier();
-            upgradeButton1.SetActive(false);
-            upgradeButton2.SetActive(false);
+            upgradeButton.SetActive(false);
         }
     }
 
@@ -102,16 +103,11 @@ public class UpgradeSystem : MonoBehaviour
     {
         if (thresholdOne && current_lvl == 0)
         {
-            upgradeButton1.SetActive(true);
+            upgradeButton.SetActive(true);
         }
-    }
-
-    // Method to activate button 2
-    private void ActivateButton2()
-    {
-        if (thresholdTwo && current_lvl == 1)
+        else if (thresholdTwo && current_lvl == 1)
         {
-            upgradeButton2.SetActive(true);
+            upgradeButton.SetActive(true);
         }
     }
 

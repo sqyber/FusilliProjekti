@@ -25,38 +25,38 @@ public class LahioWaypoints : Waypoints
 
     
 
-    public Status lahetti;
+    
 
-    public override Transform GetNextWaypoint(Transform currentWaypoint, Status statuscheck)
+    public override Transform GetNextWaypoint(Transform currentWaypoint, ref Status statuscheck)
     {
         
         if (currentWaypoint == null)
         {
             //Move to first waypoint
-            lahetti = Status.Arriving;
+            statuscheck = Status.Arriving;
             return transform.GetChild(0);
             
 
         }
 
-        if (currentWaypoint.GetSiblingIndex() == 0 && lahetti != Status.Delivered )
+        if (currentWaypoint.GetSiblingIndex() == 0 && statuscheck != Status.Delivered )
         {
-            lahetti = Status.Arrived;
+            statuscheck = Status.Arrived;
             //pick random house
 
         }
         if (currentWaypoint.GetSiblingIndex() !=0 )
         {
-            lahetti = Status.Delivered;
+            statuscheck = Status.Delivered;
             
 
         }
 
-        else if (lahetti == Status.Delivered )
+        else if (statuscheck == Status.Delivered )
         {
             
             //change bool to mark delivery done and prepare for next waypoint system
-            lahetti = Status.Leaving;
+            statuscheck = Status.Leaving;
         }
 
       
@@ -71,7 +71,7 @@ public class LahioWaypoints : Waypoints
         *  0 pisteestä seuraavalle raiteelle
         */
 
-        switch (lahetti)
+        switch (statuscheck)
         {
             case Status.Arriving:
                 // go to first waypoint
