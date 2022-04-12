@@ -8,8 +8,13 @@ public class ScoreManager : MonoBehaviour
 {
     // Use to define the TMP for score display
     [SerializeField] private TextMeshProUGUI greenScoreDisplay;
-    [SerializeField] private TextMeshProUGUI blueScoreDisplay;
     [SerializeField] private TextMeshProUGUI yellowScoreDisplay;
+    [SerializeField] private TextMeshProUGUI blueScore1Display;
+    [SerializeField] private TextMeshProUGUI blueScore2Display;
+    [SerializeField] private TextMeshProUGUI blueScore3Display;
+    [SerializeField] private TextMeshProUGUI blueScore4Display;
+    [SerializeField] private TextMeshProUGUI blueScore5Display;
+    
     private int Gscore = 0;
     private int Bscore1 = 6;
     private int Bscore2 = 6;
@@ -37,7 +42,7 @@ public class ScoreManager : MonoBehaviour
             set
             {
                 Bscore1 = value;
-                blueScoreDisplay.text = Bscore1.ToString();
+                blueScore1Display.text = Bscore1.ToString();
             }
         }
     
@@ -47,7 +52,7 @@ public class ScoreManager : MonoBehaviour
         set
         {
             Bscore2 = value;
-            blueScoreDisplay.text = Bscore2.ToString();
+            blueScore2Display.text = Bscore2.ToString();
         }
     }
     
@@ -57,7 +62,7 @@ public class ScoreManager : MonoBehaviour
         set
         {
             Bscore3 = value;
-            blueScoreDisplay.text = Bscore3.ToString();
+            blueScore3Display.text = Bscore3.ToString();
         }
     }
     
@@ -67,7 +72,7 @@ public class ScoreManager : MonoBehaviour
         set
         {
             Bscore4 = value;
-            blueScoreDisplay.text = Bscore4.ToString();
+            blueScore4Display.text = Bscore4.ToString();
         }
     }
     
@@ -77,7 +82,7 @@ public class ScoreManager : MonoBehaviour
         set
         {
             Bscore5 = value;
-            blueScoreDisplay.text = Bscore5.ToString();
+            blueScore5Display.text = Bscore5.ToString();
         }
     }
         

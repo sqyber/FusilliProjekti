@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Area3Spawning : MonoBehaviour
 {
-    // define the delivery guy object
-    [SerializeField] private GameObject deliverer;
+    // define the delivery guy objects
+    [SerializeField] private GameObject delivererRoute1;
+    [SerializeField] private GameObject delivererRoute2;
+    [SerializeField] private GameObject delivererRoute3;
 
     // A GameObject that is used to clone the original deliverer
     private GameObject spawnedDeliverer;
@@ -29,7 +31,20 @@ public class Area3Spawning : MonoBehaviour
         if (scoreManagerBlue.BlueScore3 > 0)
         {
             // set and spawn spawnedDeliverer as a clone of deliverer
-            spawnedDeliverer = Instantiate(deliverer, transform.position, Quaternion.identity);
+            // also track deliverers by amount to define which deliverer is used
+            // (used to have more routes)
+            if (scoreManagerBlue.BlueScore3 > 4)
+            {
+                spawnedDeliverer = Instantiate(delivererRoute1, transform.position, Quaternion.identity);
+            }
+            else if (scoreManagerBlue.BlueScore3 > 2)
+            {
+                spawnedDeliverer = Instantiate(delivererRoute2, transform.position, Quaternion.identity);
+            }
+            else if (scoreManagerBlue.BlueScore3 > 0)
+            {
+                spawnedDeliverer = Instantiate(delivererRoute3, transform.position, Quaternion.identity);
+            }
         
             // add the spawnedDeliverer to the list initialized earlier
             deliverers.Add(spawnedDeliverer);

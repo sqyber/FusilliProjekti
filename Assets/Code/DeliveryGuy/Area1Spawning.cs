@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,10 @@ using UnityEngine.XR;
 
 public class Area1Spawning : MonoBehaviour
 {
-    // define the delivery guy object
-    [SerializeField] private GameObject deliverer;
+    // define the delivery guy objects
+    [SerializeField] private GameObject delivererRoute1;
+    [SerializeField] private GameObject delivererRoute2;
+    [SerializeField] private GameObject delivererRoute3;
 
     // A GameObject that is used to clone the original deliverer
     private GameObject spawnedDeliverer;
@@ -17,7 +20,7 @@ public class Area1Spawning : MonoBehaviour
     private ScoreManager scoreManagerBlue;
 
     private int logisticsCap = 6;
-    
+
     private void Awake()
     {
         scoreManagerBlue = FindObjectOfType<ScoreManager>();
@@ -29,17 +32,30 @@ public class Area1Spawning : MonoBehaviour
     {
         if (scoreManagerBlue.BlueScore1 > 0)
         {
-        // set and spawn spawnedDeliverer as a clone of deliverer
-        spawnedDeliverer = Instantiate(deliverer, transform.position, Quaternion.identity);
+            // set and spawn spawnedDeliverer as a clone of deliverer
+            // also track deliverers by amount to define which deliverer is used
+            // (used to have more routes)
+            if (scoreManagerBlue.BlueScore1 > 4)
+            {
+                spawnedDeliverer = Instantiate(delivererRoute1, transform.position, Quaternion.identity);
+            }
+            else if (scoreManagerBlue.BlueScore1 > 2)
+            {
+                spawnedDeliverer = Instantiate(delivererRoute2, transform.position, Quaternion.identity);
+            }
+            else if (scoreManagerBlue.BlueScore1 > 0)
+            {
+                spawnedDeliverer = Instantiate(delivererRoute3, transform.position, Quaternion.identity);
+            }
+
+            // add the spawnedDeliverer to the list initialized earlier
+            deliverers.Add(spawnedDeliverer);
         
-        // add the spawnedDeliverer to the list initialized earlier
-        deliverers.Add(spawnedDeliverer);
+            // set the deliverer active
+            deliverers[deliverers.Count - 1].SetActive(true);
         
-        // set the deliverer active
-        deliverers[deliverers.Count - 1].SetActive(true);
-        
-        // add logistics score by one to track deliverers on the UI
-        scoreManagerBlue.BlueScore1--;
+            // add logistics score by one to track deliverers on the UI
+            scoreManagerBlue.BlueScore1--;
         }
     }
     
