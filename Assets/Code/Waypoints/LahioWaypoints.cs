@@ -11,7 +11,6 @@ public enum Status
     Arriving,
     Arrived,
     Delivered,
-    Paid,
     Leaving,
     None
 }
@@ -19,9 +18,7 @@ public class LahioWaypoints : Waypoints
 {
 
 
-
-    // TODO enum lähetin tilasta ja yhdistä switch case rakenteeseen.
-    // TODO kolmeen vaiheeseen eri tilat switchiin.
+    
     System.Random rnd = new System.Random();
 
 

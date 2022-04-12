@@ -7,6 +7,7 @@ public class WayPointMover : MonoBehaviour
 {
     
     // reference to the waypoint system
+    [SerializeField] private GameObject lahettiStatusCheck;
     [SerializeField] private Waypoints waypoints;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private Button delivered;
@@ -39,7 +40,7 @@ public class WayPointMover : MonoBehaviour
         if (Vector2.Distance(transform.position, currentWaypoint.position) < 0.1)
         {
             
-            if (waypoints.IsDelivered == true)
+            if (lahettiStatusCheck.GetComponent<LahioWaypoints>().lahetti == Status.Delivered)
             {
                 IsMoving = false;
                 delivered.gameObject.SetActive(true);
