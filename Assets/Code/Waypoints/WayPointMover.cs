@@ -40,7 +40,7 @@ public class WayPointMover : MonoBehaviour
         if (Vector2.Distance(transform.position, currentWaypoint.position) < 0.1)
         {
             
-            if (lahetti == Status.Delivered)
+            if (lahetti == Status.Arrived)
             {
                 IsMoving = false;
                 delivered.gameObject.SetActive(true);
