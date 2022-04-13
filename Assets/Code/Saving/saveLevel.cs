@@ -16,7 +16,7 @@ public class saveLevel : MonoBehaviour
     }
     
     // Start is called before the first frame update
-    private void Start()
+    private void Awake()
     {
         GetLevel();
     }
@@ -27,7 +27,7 @@ public class saveLevel : MonoBehaviour
         SaveBuildingLevel();
     }
 
-    private void SaveBuildingLevel()
+    public void SaveBuildingLevel()
     {
         PlayerPrefs.SetInt(buildingName, building.GetComponent<UpgradeSystem>().current_lvl);
     }

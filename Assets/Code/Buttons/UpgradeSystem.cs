@@ -66,6 +66,7 @@ public class UpgradeSystem : MonoBehaviour
             SwitchObject(current_level);
             UpdateModifier();
             upgradeButton.SetActive(false);
+            building.GetComponent<saveLevel>().SaveBuildingLevel();
         }
     }
 

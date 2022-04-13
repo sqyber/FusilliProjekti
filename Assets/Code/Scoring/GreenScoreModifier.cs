@@ -42,6 +42,7 @@ public class GreenScoreModifier : MonoBehaviour
     public void AddScore()
     {
         scoreManagerGreen.GreenScore += (int)multipliedScore;
+        Debug.Log(PlayerPrefs.GetInt("Greenhouse", 0));
     }
 
     // Update all multipliers with their corresponding value from the upgradeable building

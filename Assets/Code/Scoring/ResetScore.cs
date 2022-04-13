@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class ResetScore : MonoBehaviour
 {
+    [SerializeField] private bool toggleScoreReset = false;
+    [SerializeField] private bool toggleLevelReset = false;
     // Used to reset the PlayerPrefs
     void Awake()
     {
-        PlayerPrefs.SetInt("GreenScore", 0);
-        PlayerPrefs.SetInt("YellowScore", 0);
-        PlayerPrefs.SetInt("Garden", 0);
-        PlayerPrefs.SetInt("Greenhouse", 0);
-        PlayerPrefs.SetInt("Henhouse", 0);
-        PlayerPrefs.SetInt("Farm", 0);
-        PlayerPrefs.SetInt("Roofgarden", 0);
+        if (toggleScoreReset)
+        {
+            PlayerPrefs.SetInt("GreenScore", 0);
+            PlayerPrefs.SetInt("YellowScore", 0);
+        }
+
+        if (toggleLevelReset)
+        {
+            PlayerPrefs.SetInt("Garden", 0);
+            PlayerPrefs.SetInt("Greenhouse", 0);
+            PlayerPrefs.SetInt("Henhouse", 0);
+            PlayerPrefs.SetInt("Farm", 0);
+            PlayerPrefs.SetInt("Roofgarden", 0);
+        }
     }
 }
