@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: 99b4240f9d43ca64399ae686341daa58
+guid: db9f0050bba1c014699638bd79768723
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3595273399162505569
-    second: grass-water_0
+      213: -5340196910751632864
+    second: newWater - Dirt_0
   - first:
-      213: 7526892712761705970
-    second: grass-water_1
+      213: 349427185892754539
+    second: newWater - Dirt_1
   - first:
-      213: 2143392868876071213
-    second: grass-water_2
+      213: 8924047202040861735
+    second: newWater - Dirt_2
   - first:
-      213: 3655329116774789845
-    second: grass-water_3
+      213: -4778200745091512121
+    second: newWater - Dirt_3
   - first:
-      213: 8968148359630705641
-    second: grass-water_4
+      213: -7148533369399828792
+    second: newWater - Dirt_4
   - first:
-      213: -1314615456995192399
-    second: grass-water_5
+      213: -5330219821052370826
+    second: newWater - Dirt_5
   - first:
-      213: -2545565399364930376
-    second: grass-water_6
+      213: -1343703249782240204
+    second: newWater - Dirt_6
   - first:
-      213: -6473441760564068687
-    second: grass-water_7
+      213: 23369597608449179
+    second: newWater - Dirt_7
   - first:
-      213: -7476898490243647602
-    second: grass-water_8
+      213: 750418421652539512
+    second: newWater - Dirt_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -130,7 +130,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: grass-water_0
+      name: newWater - Dirt_0
       rect:
         serializedVersion: 2
         x: 0
@@ -144,14 +144,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f96f18c54e50b1ec0800000000000000
-      internalID: -3595273399162505569
+      spriteID: 022b208043fc3e5b0800000000000000
+      internalID: -5340196910751632864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass-water_1
+      name: newWater - Dirt_1
       rect:
         serializedVersion: 2
         x: 32
@@ -165,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f543a60b05e47860800000000000000
-      internalID: 7526892712761705970
+      spriteID: b64800a9c2a69d400800000000000000
+      internalID: 349427185892754539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass-water_2
+      name: newWater - Dirt_2
       rect:
         serializedVersion: 2
         x: 64
@@ -186,14 +186,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d21b673457cdebd10800000000000000
-      internalID: 2143392868876071213
+      spriteID: 724d67c06a598db70800000000000000
+      internalID: 8924047202040861735
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass-water_3
+      name: newWater - Dirt_3
       rect:
         serializedVersion: 2
         x: 0
@@ -207,14 +207,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d2f08607765ab230800000000000000
-      internalID: 3655329116774789845
+      spriteID: 7c840530dbb60bdb0800000000000000
+      internalID: -4778200745091512121
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass-water_4
+      name: newWater - Dirt_4
       rect:
         serializedVersion: 2
         x: 32
@@ -228,14 +228,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e35ac4fa63457c70800000000000000
-      internalID: 8968148359630705641
+      spriteID: 8ce95eb66ce4bcc90800000000000000
+      internalID: -7148533369399828792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass-water_5
+      name: newWater - Dirt_5
       rect:
         serializedVersion: 2
         x: 64
@@ -249,14 +249,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b1509df43c81cde0800000000000000
-      internalID: -1314615456995192399
+      spriteID: 6706d6f30514706b0800000000000000
+      internalID: -5330219821052370826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass-water_6
+      name: newWater - Dirt_6
       rect:
         serializedVersion: 2
         x: 0
@@ -270,14 +270,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b4f35a91c55cacd0800000000000000
-      internalID: -2545565399364930376
+      spriteID: 43c013973053a5de0800000000000000
+      internalID: -1343703249782240204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass-water_7
+      name: newWater - Dirt_7
       rect:
         serializedVersion: 2
         x: 32
@@ -291,14 +291,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1be366b3407b926a0800000000000000
-      internalID: -6473441760564068687
+      spriteID: b94def37686035000800000000000000
+      internalID: 23369597608449179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass-water_8
+      name: newWater - Dirt_8
       rect:
         serializedVersion: 2
         x: 64
@@ -312,8 +312,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e877f5bff68bc3890800000000000000
-      internalID: -7476898490243647602
+      spriteID: 878428f14950a6a00800000000000000
+      internalID: 750418421652539512
       vertices: []
       indices: 
       edges: []

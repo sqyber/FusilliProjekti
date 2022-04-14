@@ -1,37 +1,34 @@
 fileFormatVersion: 2
-guid: 900a42f2b84da264f89bb3ea238533b8
+guid: da33b3360996d1b418df85f76ea58b9c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7732183909217621563
-    second: waterandsand_0
+      213: -6904609848770402534
+    second: newWaterandsand_0
   - first:
-      213: 3734775519612444998
-    second: waterandsand_1
+      213: -645694937061774945
+    second: newWaterandsand_1
   - first:
-      213: -3425742216477378062
-    second: waterandsand_2
+      213: 2427605225282894727
+    second: newWaterandsand_2
   - first:
-      213: 4442099254725161586
-    second: waterandsand_3
+      213: -511838347283592609
+    second: newWaterandsand_3
   - first:
-      213: -6145769088703977394
-    second: waterandsand_4
+      213: 4971419659917689791
+    second: newWaterandsand_4
   - first:
-      213: -1209453854958341977
-    second: waterandsand_5
+      213: -7955034939330033272
+    second: newWaterandsand_5
   - first:
-      213: 4401911135357586417
-    second: waterandsand_6
+      213: 8854740363594886723
+    second: newWaterandsand_6
   - first:
-      213: 3357836788379317152
-    second: waterandsand_7
+      213: -5946359836179254514
+    second: newWaterandsand_7
   - first:
-      213: -8718699326990599558
-    second: waterandsand_8
-  - first:
-      213: -6844658878810605035
-    second: waterandsand_9
+      213: 5818658971333626739
+    second: newWaterandsand_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -133,70 +130,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: waterandsand_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3658ee6c4c3e4b60800000000000000
-      internalID: 7732183909217621563
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: waterandsand_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64123522c8694d330800000000000000
-      internalID: 3734775519612444998
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: waterandsand_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f97eceba915570d0800000000000000
-      internalID: -3425742216477378062
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: waterandsand_3
+      name: newWaterandsand_0
       rect:
         serializedVersion: 2
         x: 0
@@ -210,14 +144,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 272bbe6acb185ad30800000000000000
-      internalID: 4442099254725161586
+      spriteID: a17606bbce5ed20a0800000000000000
+      internalID: -6904609848770402534
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waterandsand_4
+      name: newWaterandsand_1
       rect:
         serializedVersion: 2
         x: 32
@@ -231,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4829345397d5baa0800000000000000
-      internalID: -6145769088703977394
+      spriteID: f992a2330e70a07f0800000000000000
+      internalID: -645694937061774945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waterandsand_5
+      name: newWaterandsand_2
       rect:
         serializedVersion: 2
         x: 64
@@ -252,14 +186,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a03bfa7028273fe0800000000000000
-      internalID: -1209453854958341977
+      spriteID: 78b7ed3271690b120800000000000000
+      internalID: 2427605225282894727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waterandsand_6
+      name: newWaterandsand_3
       rect:
         serializedVersion: 2
         x: 0
@@ -273,14 +207,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fb43d3fadab61d30800000000000000
-      internalID: 4401911135357586417
+      spriteID: f5a0db72cb595e8f0800000000000000
+      internalID: -511838347283592609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waterandsand_7
+      name: newWaterandsand_4
       rect:
         serializedVersion: 2
         x: 32
@@ -294,14 +228,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a37619b4ce699e20800000000000000
-      internalID: 3357836788379317152
+      spriteID: fb389ca47d70ef440800000000000000
+      internalID: 4971419659917689791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waterandsand_8
+      name: newWaterandsand_5
       rect:
         serializedVersion: 2
         x: 64
@@ -315,14 +249,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7ab94fd725f00780800000000000000
-      internalID: -8718699326990599558
+      spriteID: 8898969ced90a9190800000000000000
+      internalID: -7955034939330033272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waterandsand_9
+      name: newWaterandsand_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ee26e327b52ea70800000000000000
+      internalID: 8854740363594886723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newWaterandsand_7
       rect:
         serializedVersion: 2
         x: 32
@@ -336,8 +291,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51a35c7a303e201a0800000000000000
-      internalID: -6844658878810605035
+      spriteID: e03b2e1fb394a7da0800000000000000
+      internalID: -5946359836179254514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newWaterandsand_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b0b7f718700c050800000000000000
+      internalID: 5818658971333626739
       vertices: []
       indices: 
       edges: []
