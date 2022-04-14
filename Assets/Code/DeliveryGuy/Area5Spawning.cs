@@ -8,6 +8,9 @@ public class Area5Spawning : MonoBehaviour
     [SerializeField] private GameObject delivererRoute1;
     [SerializeField] private GameObject delivererRoute2;
     //[SerializeField] private GameObject delivererRoute3;
+    
+    // define areas upgradeable building
+    [SerializeField] private GameObject building;
 
     // A GameObject that is used to clone the original deliverer
     private GameObject spawnedDeliverer;
@@ -17,18 +20,17 @@ public class Area5Spawning : MonoBehaviour
     
     private ScoreManager scoreManagerBlue;
 
-    private int logisticsCap = 6;
+    // switch to 6 when third area is created
+    private int logisticsCap = 4;
 
     private void Awake()
     {
         scoreManagerBlue = FindObjectOfType<ScoreManager>();
-        scoreManagerBlue.BlueScore5 = logisticsCap;
     }
-    
-    // Start is called before the first frame update
+
     private void Start()
     {
-        scoreManagerBlue = FindObjectOfType<ScoreManager>();
+        CheckCurrentLevel();
     }
 
     // spawn deliverers
@@ -39,15 +41,15 @@ public class Area5Spawning : MonoBehaviour
             // set and spawn spawnedDeliverer as a clone of deliverer
             // also track deliverers by amount to define which deliverer is used
             // (used to have more routes)
-            if (scoreManagerBlue.BlueScore5 > 3)
+            if (deliverers.Count <= 2)
             {
                 spawnedDeliverer = Instantiate(delivererRoute1, transform.position, Quaternion.identity);
             }
-            else if (scoreManagerBlue.BlueScore5 > 0)
+            else if (deliverers.Count <= 5)
             {
                 spawnedDeliverer = Instantiate(delivererRoute2, transform.position, Quaternion.identity);
             }
-            /*else if (scoreManagerBlue.BlueScore5 > 0)
+            /*else if (deliverers.Count <= 5)
             {
                 spawnedDeliverer = Instantiate(delivererRoute3, transform.position, Quaternion.identity);
             }*/
@@ -82,5 +84,34 @@ public class Area5Spawning : MonoBehaviour
             // reduce logistics score to track the amount of deliverers on the UI
             scoreManagerBlue.BlueScore5++;
         }
+    }
+    
+    // Check the areas upgradeable buildings current level and set the deliverer amount according to that
+    private void CheckCurrentLevel()
+    {
+        if (building.GetComponent<UpgradeSystem>().current_lvl == 2)
+        {
+            scoreManagerBlue.BlueScore5 = 6;
+            logisticsCap = 4;
+        }
+        
+        if (building.GetComponent<UpgradeSystem>().current_lvl == 1)
+        {
+            scoreManagerBlue.BlueScore5 = 4;
+            logisticsCap = 4;
+        }
+        
+        if (building.GetComponent<UpgradeSystem>().current_lvl == 0)
+        {
+            scoreManagerBlue.BlueScore5 = 2;
+            logisticsCap = 2;
+        }
+    }
+    
+    // Method to add deliverers and logistics cap along with upgrade levels
+    public void AddDeliverersArea5()
+    {
+        scoreManagerBlue.BlueScore5 += 2;
+        logisticsCap += 2;
     }
 }

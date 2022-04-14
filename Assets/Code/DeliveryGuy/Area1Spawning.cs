@@ -25,7 +25,7 @@ public class Area1Spawning : MonoBehaviour
     {
         scoreManagerBlue = FindObjectOfType<ScoreManager>();
         scoreManagerBlue.BlueScore1 = 6;
-        logisticsCap = scoreManagerBlue.BlueScore1;
+        logisticsCap = 6;
     }
 
     // spawn deliverers
@@ -36,15 +36,15 @@ public class Area1Spawning : MonoBehaviour
             // set and spawn spawnedDeliverer as a clone of deliverer
             // also track deliverers by amount to define which deliverer is used
             // (used to have more routes)
-            if (scoreManagerBlue.BlueScore1 > 4)
+            if (deliverers.Count <= 1)
             {
                 spawnedDeliverer = Instantiate(delivererRoute1, transform.position, Quaternion.identity);
             }
-            else if (scoreManagerBlue.BlueScore1 > 2)
+            else if (deliverers.Count <= 3)
             {
                 spawnedDeliverer = Instantiate(delivererRoute2, transform.position, Quaternion.identity);
             }
-            else if (scoreManagerBlue.BlueScore1 > 0)
+            else if (deliverers.Count <= 5)
             {
                 spawnedDeliverer = Instantiate(delivererRoute3, transform.position, Quaternion.identity);
             }

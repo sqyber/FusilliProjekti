@@ -25,13 +25,7 @@ public class UpgradeSystem : MonoBehaviour
     // Scoremodifiers that increase the score gained after upgrades
     [SerializeField] private float scoreModifierLvl1 = 1;
     [SerializeField] private float scoreModifierLvl2 = 1;
-    
-    // Define spawnerobjects here to use scripts from them to increase deliveryguy amount
-    [SerializeField] private GameObject AreaTwoSpawner;
-    [SerializeField] private GameObject AreaThreeSpawner;
-    [SerializeField] private GameObject AreaFourSpawner;
-    [SerializeField] private GameObject AreaFiveSpawner;
-    
+
     // Used to track the scoremodifier given by level and sent onward to be used in another script
     private float scoreModifier = 1;
 
