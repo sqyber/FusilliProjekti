@@ -14,13 +14,13 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI blueScore3Display;
     [SerializeField] private TextMeshProUGUI blueScore4Display;
     [SerializeField] private TextMeshProUGUI blueScore5Display;
-    
+
     private int Gscore = 0;
-    private int Bscore1 = 6;
-    private int Bscore2 = 6;
-    private int Bscore3 = 6;
-    private int Bscore4 = 6;
-    private int Bscore5 = 6;
+    private int Bscore1 = 0;
+    private int Bscore2 = 0;
+    private int Bscore3 = 0;
+    private int Bscore4 = 0;
+    private int Bscore5 = 0;
     private int Yscore = 0;
 
     // Setting the private GScore value with the GreenScore value to protect the value

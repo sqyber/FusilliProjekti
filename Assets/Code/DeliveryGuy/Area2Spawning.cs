@@ -8,6 +8,9 @@ public class Area2Spawning : MonoBehaviour
     [SerializeField] private GameObject delivererRoute1;
     [SerializeField] private GameObject delivererRoute2;
     [SerializeField] private GameObject delivererRoute3;
+    
+    // define areas upgradeable building
+    [SerializeField] private GameObject building;
 
     // A GameObject that is used to clone the original deliverer
     private GameObject spawnedDeliverer;
@@ -17,12 +20,16 @@ public class Area2Spawning : MonoBehaviour
     
     private ScoreManager scoreManagerBlue;
 
-    private int logisticsCap = 6;
+    private int logisticsCap;
     
     private void Awake()
     {
         scoreManagerBlue = FindObjectOfType<ScoreManager>();
-        scoreManagerBlue.BlueScore2 = logisticsCap;
+    }
+
+    private void Start()
+    {
+        CheckCurrentLevel();
     }
 
     // spawn deliverers
@@ -33,15 +40,15 @@ public class Area2Spawning : MonoBehaviour
             // set and spawn spawnedDeliverer as a clone of deliverer
             // also track deliverers by amount to define which deliverer is used
             // (used to have more routes)
-            if (scoreManagerBlue.BlueScore2 > 4)
+            if (scoreManagerBlue.BlueScore2 == 2 || scoreManagerBlue.BlueScore2 == 1)
             {
                 spawnedDeliverer = Instantiate(delivererRoute1, transform.position, Quaternion.identity);
             }
-            else if (scoreManagerBlue.BlueScore2 > 2)
+            else if (scoreManagerBlue.BlueScore2 == 4 || scoreManagerBlue.BlueScore2 == 3)
             {
                 spawnedDeliverer = Instantiate(delivererRoute2, transform.position, Quaternion.identity);
             }
-            else if (scoreManagerBlue.BlueScore2 > 0)
+            else if (scoreManagerBlue.BlueScore2 == 6 || scoreManagerBlue.BlueScore2 == 5)
             {
                 spawnedDeliverer = Instantiate(delivererRoute3, transform.position, Quaternion.identity);
             }
@@ -76,5 +83,29 @@ public class Area2Spawning : MonoBehaviour
             // reduce logistics score to track the amount of deliverers on the UI
             scoreManagerBlue.BlueScore2++;
         }
+    }
+
+    private void CheckCurrentLevel()
+    {
+        if (building.GetComponent<UpgradeSystem>().current_lvl == 1)
+        {
+            scoreManagerBlue.BlueScore2 = 4;
+            logisticsCap = scoreManagerBlue.BlueScore2;
+        }
+        
+        if (building.GetComponent<UpgradeSystem>().current_lvl == 2)
+        {
+            scoreManagerBlue.BlueScore2 = 6;
+            logisticsCap = scoreManagerBlue.BlueScore2;
+        }
+        
+        scoreManagerBlue.BlueScore2 = 2;
+        logisticsCap = scoreManagerBlue.BlueScore2;
+    }
+    
+    public void AddDeliverersArea2()
+    {
+        scoreManagerBlue.BlueScore2 += 2;
+        logisticsCap = scoreManagerBlue.BlueScore2;
     }
 }

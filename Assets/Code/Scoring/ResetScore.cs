@@ -6,8 +6,14 @@ public class ResetScore : MonoBehaviour
 {
     [SerializeField] private bool toggleScoreReset = false;
     [SerializeField] private bool toggleLevelReset = false;
+
+    public bool tglLvlReset
+    {
+        get { return toggleLevelReset; }
+    }
+    
     // Used to reset the PlayerPrefs
-    void Awake()
+    private void Awake()
     {
         if (toggleScoreReset)
         {

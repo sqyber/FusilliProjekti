@@ -19,12 +19,13 @@ public class Area1Spawning : MonoBehaviour
     
     private ScoreManager scoreManagerBlue;
 
-    private int logisticsCap = 6;
+    private int logisticsCap;
 
     private void Awake()
     {
         scoreManagerBlue = FindObjectOfType<ScoreManager>();
-        scoreManagerBlue.BlueScore1 = logisticsCap;
+        scoreManagerBlue.BlueScore1 = 6;
+        logisticsCap = scoreManagerBlue.BlueScore1;
     }
 
     // spawn deliverers
