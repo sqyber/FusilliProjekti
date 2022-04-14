@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class BackButtonExit : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject exitMenu;
+    private void Update()
     {
-        // Makes the press of back button close the app
-        Input.backButtonLeavesApp = true;
+        if (Input.GetKey("escape"))
+        {
+            exitMenu.SetActive(true);
+        }
     }
 }

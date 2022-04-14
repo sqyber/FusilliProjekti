@@ -23,8 +23,8 @@ public class UpgradeSystem : MonoBehaviour
     [SerializeField] private int thresholdTwoValue;
     
     // Scoremodifiers that increase the score gained after upgrades
-    [SerializeField] private float scoreModifierLvl1 = 1;
-    [SerializeField] private float scoreModifierLvl2 = 1;
+    [SerializeField] private float greenScoreModifierLvl1 = 1;
+    [SerializeField] private float greenScoreModifierLvl2 = 1;
 
     // Used to track the scoremodifier given by level and sent onward to be used in another script
     private float scoreModifier = 1;
@@ -119,11 +119,11 @@ public class UpgradeSystem : MonoBehaviour
     {
         if (current_lvl == 1)
         {
-            scoreModifier = scoreModifierLvl1;
+            scoreModifier = greenScoreModifierLvl1;
         }
         else if (current_lvl == 2)
         {
-            scoreModifier = scoreModifierLvl2;
+            scoreModifier = greenScoreModifierLvl2;
         }
     }
 }

@@ -24,8 +24,17 @@ public class Area1Spawning : MonoBehaviour
     private void Awake()
     {
         scoreManagerBlue = FindObjectOfType<ScoreManager>();
-        scoreManagerBlue.BlueScore1 = 6;
-        logisticsCap = 6;
+    }
+
+    private void Start()
+    {
+        SetBaseValues();
+    }
+
+    private void Update()
+    {
+        CheckArraySize();
+        Debug.Log("BlueScore1 = " + scoreManagerBlue.BlueScore1);
     }
 
     // spawn deliverers
@@ -78,6 +87,20 @@ public class Area1Spawning : MonoBehaviour
             
             // reduce logistics score to track the amount of deliverers on the UI
             scoreManagerBlue.BlueScore1++;
+        }
+    }
+
+    private void SetBaseValues()
+    {
+        scoreManagerBlue.BlueScore1 = 6;
+        logisticsCap = 6;
+    }
+
+    private void CheckArraySize()
+    {
+        if (deliverers.Count == 6)
+        {
+            scoreManagerBlue.BlueScore1 = 0;
         }
     }
 }
