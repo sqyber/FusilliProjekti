@@ -16605,7 +16605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleScoreReset: 0
-  toggleLevelReset: 1
+  toggleLevelReset: 0
 --- !u!1 &842634082
 GameObject:
   m_ObjectHideFlags: 0

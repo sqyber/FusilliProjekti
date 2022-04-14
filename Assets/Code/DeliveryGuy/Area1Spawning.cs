@@ -34,7 +34,6 @@ public class Area1Spawning : MonoBehaviour
     private void Update()
     {
         CheckArraySize();
-        Debug.Log("BlueScore1 = " + scoreManagerBlue.BlueScore1);
     }
 
     // spawn deliverers
