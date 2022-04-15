@@ -17,17 +17,27 @@ public class ResetScore : MonoBehaviour
     {
         if (toggleScoreReset)
         {
-            PlayerPrefs.SetInt("GreenScore", 0);
-            PlayerPrefs.SetInt("YellowScore", 0);
+            SetScoresToZero();
         }
 
         if (toggleLevelReset)
         {
-            PlayerPrefs.SetInt("Garden", 0);
-            PlayerPrefs.SetInt("Greenhouse", 0);
-            PlayerPrefs.SetInt("Henhouse", 0);
-            PlayerPrefs.SetInt("Farm", 0);
-            PlayerPrefs.SetInt("Roofgarden", 0);
+            SetUpgradesToZero();
         }
+    }
+
+    private static void SetScoresToZero()
+    {
+        PlayerPrefs.SetInt("GreenScore", 0);
+        PlayerPrefs.SetInt("YellowScore", 0);
+    }
+    
+    private static void SetUpgradesToZero()
+    {
+        PlayerPrefs.SetInt("Garden", 0);
+        PlayerPrefs.SetInt("Greenhouse", 0);
+        PlayerPrefs.SetInt("Henhouse", 0);
+        PlayerPrefs.SetInt("Farm", 0);
+        PlayerPrefs.SetInt("Roofgarden", 0);
     }
 }

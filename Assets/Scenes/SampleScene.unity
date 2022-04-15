@@ -9701,8 +9701,8 @@ MonoBehaviour:
   building: {fileID: 513922501}
   thresholdOneValue: 0
   thresholdTwoValue: 0
-  greenScoreModifierLvl1: 1
-  greenScoreModifierLvl2: 1
+  greenScoreModifierLvl1: 2
+  greenScoreModifierLvl2: 3
   levels:
   - {fileID: 222370904}
   - {fileID: 1861664504}

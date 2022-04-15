@@ -108,8 +108,10 @@ public class UpgradeSystem : MonoBehaviour
         if (thresholdOne && current_lvl == 0)
         {
             upgradeButton.SetActive(true);
+            return;
         }
-        else if (thresholdTwo && current_lvl == 1)
+        
+        if (thresholdTwo && current_lvl == 1)
         {
             upgradeButton.SetActive(true);
         }
@@ -117,13 +119,14 @@ public class UpgradeSystem : MonoBehaviour
 
     private void UpdateModifier()
     {
-        if (current_lvl == 1)
+        switch (current_lvl)
         {
-            scoreModifier = greenScoreModifierLvl1;
-        }
-        else if (current_lvl == 2)
-        {
-            scoreModifier = greenScoreModifierLvl2;
+            case 1:
+                scoreModifier = greenScoreModifierLvl1;
+                return;
+            case 2:
+                scoreModifier = greenScoreModifierLvl2;
+                break;
         }
     }
 }

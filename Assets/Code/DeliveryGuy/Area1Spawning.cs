@@ -39,33 +39,26 @@ public class Area1Spawning : MonoBehaviour
     // spawn deliverers
     public void Spawn()
     {
-        if (scoreManagerBlue.BlueScore1 > 0)
+        if (scoreManagerBlue.BlueScore1 <= 0) return;
+        // set and spawn spawnedDeliverer as a clone of deliverer
+        // also track deliverers by amount to define which deliverer is used
+        // (used to have more routes)
+        if (deliverers.Count <= 1)
         {
-            // set and spawn spawnedDeliverer as a clone of deliverer
-            // also track deliverers by amount to define which deliverer is used
-            // (used to have more routes)
-            if (deliverers.Count <= 1)
-            {
-                spawnedDeliverer = Instantiate(delivererRoute1, transform.position, Quaternion.identity);
-            }
-            else if (deliverers.Count <= 3)
-            {
-                spawnedDeliverer = Instantiate(delivererRoute2, transform.position, Quaternion.identity);
-            }
-            else if (deliverers.Count <= 5)
-            {
-                spawnedDeliverer = Instantiate(delivererRoute3, transform.position, Quaternion.identity);
-            }
-
-            // add the spawnedDeliverer to the list initialized earlier
-            deliverers.Add(spawnedDeliverer);
-        
-            // set the deliverer active
-            deliverers[deliverers.Count - 1].SetActive(true);
-        
-            // add logistics score by one to track deliverers on the UI
-            scoreManagerBlue.BlueScore1--;
+            spawnedDeliverer = Instantiate(delivererRoute1, transform.position, Quaternion.identity);
+            DelivererToArray();
+            return;
         }
+        
+        if (deliverers.Count <= 3)
+        {
+            spawnedDeliverer = Instantiate(delivererRoute2, transform.position, Quaternion.identity);
+            DelivererToArray();
+            return;
+        }
+        
+        spawnedDeliverer = Instantiate(delivererRoute3, transform.position, Quaternion.identity);
+        DelivererToArray();
     }
     
     // despawn the last deliverer that was spawned
@@ -78,15 +71,26 @@ public class Area1Spawning : MonoBehaviour
             return;
         }
 
-        if (scoreManagerBlue.BlueScore1 < logisticsCap)
-        {
-            Destroy(deliverers[deliverers.Count - 1]);
-            deliverers.RemoveAt(deliverers.Count - 1);
-            spawnedDeliverer = null;
+        if (scoreManagerBlue.BlueScore1 >= logisticsCap) return;
+        
+        Destroy(deliverers[deliverers.Count - 1]);
+        deliverers.RemoveAt(deliverers.Count - 1);
+        spawnedDeliverer = null;
             
-            // reduce logistics score to track the amount of deliverers on the UI
-            scoreManagerBlue.BlueScore1++;
-        }
+        // reduce logistics score to track the amount of deliverers on the UI
+        scoreManagerBlue.BlueScore1++;
+    }
+
+    private void DelivererToArray()
+    {
+        // add the spawnedDeliverer to the list initialized earlier
+        deliverers.Add(spawnedDeliverer);
+        
+        // set the deliverer active
+        deliverers[deliverers.Count - 1].SetActive(true);
+        
+        // add logistics score by one to track deliverers on the UI
+        scoreManagerBlue.BlueScore1--;
     }
 
     private void SetBaseValues()

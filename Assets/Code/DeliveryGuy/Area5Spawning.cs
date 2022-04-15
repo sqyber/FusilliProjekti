@@ -75,37 +75,35 @@ public class Area5Spawning : MonoBehaviour
             return;
         }
 
-        if (scoreManagerBlue.BlueScore5 < logisticsCap)
-        {
-            Destroy(deliverers[deliverers.Count - 1]);
-            deliverers.RemoveAt(deliverers.Count - 1);
-            spawnedDeliverer = null;
+        if (scoreManagerBlue.BlueScore5 >= logisticsCap) return;
+        
+        Destroy(deliverers[deliverers.Count - 1]);
+        deliverers.RemoveAt(deliverers.Count - 1);
+        spawnedDeliverer = null;
             
-            // reduce logistics score to track the amount of deliverers on the UI
-            scoreManagerBlue.BlueScore5++;
-        }
+        // reduce logistics score to track the amount of deliverers on the UI
+        scoreManagerBlue.BlueScore5++;
     }
     
     // Check the areas upgradeable buildings current level and set the deliverer amount according to that
     private void CheckCurrentLevel()
     {
-        if (building.GetComponent<UpgradeSystem>().current_lvl == 2)
+        if (PlayerPrefs.GetInt("Roofgarden") == 2)
         {
             scoreManagerBlue.BlueScore5 = 6;
-            logisticsCap = 4;
+            logisticsCap = 6;
+            return;
         }
         
-        if (building.GetComponent<UpgradeSystem>().current_lvl == 1)
+        if (PlayerPrefs.GetInt("Roofgarden") == 1)
         {
             scoreManagerBlue.BlueScore5 = 4;
             logisticsCap = 4;
+            return;
         }
         
-        if (building.GetComponent<UpgradeSystem>().current_lvl == 0)
-        {
-            scoreManagerBlue.BlueScore5 = 2;
-            logisticsCap = 2;
-        }
+        scoreManagerBlue.BlueScore5 = 2;
+        logisticsCap = 2;
     }
     
     // Method to add deliverers and logistics cap along with upgrade levels

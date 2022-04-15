@@ -19,18 +19,19 @@ public class ToggleFoliage : MonoBehaviour
         if (building.GetComponent<UpgradeSystem>().current_lvl == 0)
         {
             foliageLvl1.SetActive(true);
+            return;
         }
 
         if (building.GetComponent<UpgradeSystem>().current_lvl == 1)
         {
             foliageLvl1.SetActive(false);
             foliageLvl2.SetActive(true);
+            return;
         }
 
-        if (building.GetComponent<UpgradeSystem>().current_lvl == 2)
-        {
-            foliageLvl2.SetActive(false);
-            foliageLvl3.SetActive(true);
-        }
+        if (building.GetComponent<UpgradeSystem>().current_lvl != 2) return;
+        
+        foliageLvl2.SetActive(false);
+        foliageLvl3.SetActive(true);
     }
 }

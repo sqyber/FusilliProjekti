@@ -31,22 +31,20 @@ public class AreaUnlocking : MonoBehaviour
     // Activate next areas buttons, if current areas building is lvl 2
     private void ActivateButtons()
     {
-        if (buildingLvl2)
-        {
-            nextAreaMinus.SetActive(true);
-            nextAreaPlus.SetActive(true);
-            nextAreaLogistics.SetActive(true);
-        }
+        if (!buildingLvl2) return;
+        
+        nextAreaMinus.SetActive(true);
+        nextAreaPlus.SetActive(true);
+        nextAreaLogistics.SetActive(true);
     }
 
     // Keep buttons deactivated, if current areas building isn't lvl 2
     private void DeactivateButtons()
     {
-        if (!buildingLvl2)
-        {
-            nextAreaMinus.SetActive(false);
-            nextAreaPlus.SetActive(false);
-            nextAreaLogistics.SetActive(false);
-        }
+        if (buildingLvl2) return;
+        
+        nextAreaMinus.SetActive(false);
+        nextAreaPlus.SetActive(false);
+        nextAreaLogistics.SetActive(false);
     }
 }
