@@ -10,6 +10,7 @@ public class WayPointMover : MonoBehaviour
     [SerializeField] private Waypoints waypoints;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private Button delivered;
+    [SerializeField] private GameObject buttonSprite;
     private Transform currentWaypoint;
     private bool IsMoving = true;
     
@@ -25,6 +26,7 @@ public class WayPointMover : MonoBehaviour
         currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint, ref lahetti);
         
         delivered.gameObject.SetActive(false);
+        buttonSprite.SetActive(false);
     }
 
     // Update is called once per frame
@@ -44,6 +46,7 @@ public class WayPointMover : MonoBehaviour
             {
                 IsMoving = false;
                 delivered.gameObject.SetActive(true);
+                buttonSprite.SetActive(true);
             }
             
             currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint, ref lahetti);
@@ -59,6 +62,7 @@ public class WayPointMover : MonoBehaviour
     public void OnDelivered()
     {
         delivered.gameObject.SetActive(false);
+        buttonSprite.SetActive(false);
 
         IsMoving = true;
         waypoints.ResetDelivered();

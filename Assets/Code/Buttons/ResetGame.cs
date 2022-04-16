@@ -5,19 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class ResetGame : MonoBehaviour
 {
-    [SerializeField] private GameObject Henhouse;
-    [SerializeField] private GameObject Garden;
-    [SerializeField] private GameObject Farm;
-    [SerializeField] private GameObject Greenhouse;
-    [SerializeField] private GameObject Roofgarden;
-    
+    // Upgradeable building of each area so that the component values from them
+    // can be reset
+    [SerializeField] private GameObject henhouse;
+    [SerializeField] private GameObject garden;
+    [SerializeField] private GameObject farm;
+    [SerializeField] private GameObject greenhouse;
+    [SerializeField] private GameObject roofgarden;
+
+    // Public function used in the reset button
     public void ResetButton()
     {
         SetPlayerPrefsToZero();
         SetScriptValuesToZero();
-        ReloadScene();
     }
 
+    // Set playerprefs to zero on reset
     private void SetPlayerPrefsToZero()
     {
         // Score playerprefs
@@ -32,25 +35,21 @@ public class ResetGame : MonoBehaviour
         PlayerPrefs.SetInt("Roofgarden", 0);
     }
 
-    private void ReloadScene()
-    {
-        SceneManager.LoadScene("SampleScene");
-    }
-
+    // Set values in scripts to zero on reset
     private void SetScriptValuesToZero()
     {
         // Set UpgradeSystems current_level to 0
-        Henhouse.GetComponent<UpgradeSystem>().SetLevelToZero();
-        Garden.GetComponent<UpgradeSystem>().SetLevelToZero();
-        Farm.GetComponent<UpgradeSystem>().SetLevelToZero();
-        Greenhouse.GetComponent<UpgradeSystem>().SetLevelToZero();
-        Roofgarden.GetComponent<UpgradeSystem>().SetLevelToZero();
+        henhouse.GetComponent<UpgradeSystem>().SetLevelToZero();
+        garden.GetComponent<UpgradeSystem>().SetLevelToZero();
+        farm.GetComponent<UpgradeSystem>().SetLevelToZero();
+        greenhouse.GetComponent<UpgradeSystem>().SetLevelToZero();
+        roofgarden.GetComponent<UpgradeSystem>().SetLevelToZero();
         
         // Set saveLevels levelOfBuilding to 0
-        Henhouse.GetComponent<saveLevel>().SetBuildingToZero();
-        Garden.GetComponent<saveLevel>().SetBuildingToZero();
-        Farm.GetComponent<saveLevel>().SetBuildingToZero();
-        Greenhouse.GetComponent<saveLevel>().SetBuildingToZero();
-        Roofgarden.GetComponent<saveLevel>().SetBuildingToZero();
+        henhouse.GetComponent<saveLevel>().SetBuildingToZero();
+        garden.GetComponent<saveLevel>().SetBuildingToZero();
+        farm.GetComponent<saveLevel>().SetBuildingToZero();
+        greenhouse.GetComponent<saveLevel>().SetBuildingToZero();
+        roofgarden.GetComponent<saveLevel>().SetBuildingToZero();
     }
 }
