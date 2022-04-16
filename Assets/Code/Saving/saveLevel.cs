@@ -32,13 +32,21 @@ public class saveLevel : MonoBehaviour
         SaveBuildingLevel();
     }
 
+    // Save buildings current level to playerprefs
     public void SaveBuildingLevel()
     {
         PlayerPrefs.SetInt(buildingName, building.GetComponent<UpgradeSystem>().current_lvl);
     }
 
+    // Get the buildings level from playerprefs
     private void GetLevel()
     {
         levelOfBuilding = PlayerPrefs.GetInt(buildingName, 0);
+    }
+    
+    // Function used to reset stored levels
+    public void SetBuildingToZero()
+    {
+        levelOfBuilding = 0;
     }
 }

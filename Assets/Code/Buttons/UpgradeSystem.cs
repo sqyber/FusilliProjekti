@@ -45,7 +45,7 @@ public class UpgradeSystem : MonoBehaviour
     {
         get { return scoreModifier; }
     }
-
+    
     private void Start()
     {
         if (building.GetComponent<saveLevel>().lvlOfBuilding != 0)
@@ -67,7 +67,7 @@ public class UpgradeSystem : MonoBehaviour
         {
             current_level++;
             SwitchObject(current_level);
-            UpdateModifier();
+            UpdateScoreModifier();
             upgradeButton.SetActive(false);
             building.GetComponent<saveLevel>().SaveBuildingLevel();
         }
@@ -105,21 +105,22 @@ public class UpgradeSystem : MonoBehaviour
     // Method to activate button 1
     private void ActivateButton()
     {
-        if (thresholdOne && current_lvl == 0)
+        if (thresholdOne && current_level == 0)
         {
             upgradeButton.SetActive(true);
             return;
         }
         
-        if (thresholdTwo && current_lvl == 1)
+        if (thresholdTwo && current_level == 1)
         {
             upgradeButton.SetActive(true);
         }
     }
 
-    private void UpdateModifier()
+    // Updates the upgradeable buildings scoremodifier according to the level of the building
+    private void UpdateScoreModifier()
     {
-        switch (current_lvl)
+        switch (current_level)
         {
             case 1:
                 scoreModifier = greenScoreModifierLvl1;
@@ -128,5 +129,11 @@ public class UpgradeSystem : MonoBehaviour
                 scoreModifier = greenScoreModifierLvl2;
                 break;
         }
+    }
+
+    // Function used in resetting the game
+    public void SetLevelToZero()
+    {
+        current_level = 0;
     }
 }

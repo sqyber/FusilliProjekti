@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Area4Spawning : MonoBehaviour
@@ -11,6 +12,9 @@ public class Area4Spawning : MonoBehaviour
     
     // define areas upgradeable building
     [SerializeField] private GameObject building;
+
+    // used to store the current level of the areas upgradeable building
+    private int buildingsLvl;
 
     // A GameObject that is used to clone the original deliverer
     private GameObject spawnedDeliverer;
@@ -29,7 +33,8 @@ public class Area4Spawning : MonoBehaviour
 
     private void Start()
     {
-        CheckCurrentLevel();
+        GetCurrentLevel();
+        SetScoreAndLogistics();
     }
 
     // spawn deliverers
@@ -69,12 +74,7 @@ public class Area4Spawning : MonoBehaviour
     {
         // Check if lists index value is below zero, if yes then return
         // otherwise destroy the last object in the list
-        if (deliverers.Count - 1 < 0)
-        {
-            return;
-        }
-
-        if (scoreManagerBlue.BlueScore4 >= logisticsCap) return;
+        if (scoreManagerBlue.BlueScore4 >= logisticsCap || deliverers.Count - 1 < 0) return;
         
         Destroy(deliverers[deliverers.Count - 1]);
         deliverers.RemoveAt(deliverers.Count - 1);
@@ -84,25 +84,30 @@ public class Area4Spawning : MonoBehaviour
         scoreManagerBlue.BlueScore4++;
     }
     
-    // Check the areas upgradeable buildings current level and set the deliverer amount according to that
-    private void CheckCurrentLevel()
+    // Check the areas upgradeable buildings current level
+    private void GetCurrentLevel()
     {
-        if (PlayerPrefs.GetInt("Greenhouse") == 2)
+        buildingsLvl = building.GetComponent<saveLevel>().lvlOfBuilding;
+    }
+
+    // Set the logisticscap and max. deliverer amount according to the buildings level
+    private void SetScoreAndLogistics()
+    {
+        switch (buildingsLvl)
         {
-            scoreManagerBlue.BlueScore4 = 6;
-            logisticsCap = 6;
-            return;
+            case 2:
+                scoreManagerBlue.BlueScore4 = 6;
+                logisticsCap = 6;
+                return;
+            case 1:
+                scoreManagerBlue.BlueScore4 = 4;
+                logisticsCap = 4;
+                return;
+            case 0:
+                scoreManagerBlue.BlueScore4 = 2;
+                logisticsCap = 2;
+                return;
         }
-        
-        if (PlayerPrefs.GetInt("Greenhouse") == 1)
-        {
-            scoreManagerBlue.BlueScore4 = 4;
-            logisticsCap = 4;
-            return;
-        }
-        
-        scoreManagerBlue.BlueScore4 = 2;
-        logisticsCap = 2;
     }
     
     // Method to add deliverers and logistics cap along with upgrade levels

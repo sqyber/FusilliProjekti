@@ -24,10 +24,6 @@ public class Area1Spawning : MonoBehaviour
     private void Awake()
     {
         scoreManagerBlue = FindObjectOfType<ScoreManager>();
-    }
-
-    private void Start()
-    {
         SetBaseValues();
     }
 
@@ -66,12 +62,7 @@ public class Area1Spawning : MonoBehaviour
     {
         // Check if lists index value is below zero, if yes then return
         // otherwise destroy the last object in the list
-        if (deliverers.Count - 1 < 0)
-        {
-            return;
-        }
-
-        if (scoreManagerBlue.BlueScore1 >= logisticsCap) return;
+        if (scoreManagerBlue.BlueScore1 >= logisticsCap || deliverers.Count - 1 < 0) return;
         
         Destroy(deliverers[deliverers.Count - 1]);
         deliverers.RemoveAt(deliverers.Count - 1);

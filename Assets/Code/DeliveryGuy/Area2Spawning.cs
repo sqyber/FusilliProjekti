@@ -12,6 +12,8 @@ public class Area2Spawning : MonoBehaviour
     // define areas upgradeable building
     [SerializeField] private GameObject building;
 
+    private int buildingsLvl;
+
     // A GameObject that is used to clone the original deliverer
     private GameObject spawnedDeliverer;
 
@@ -29,7 +31,8 @@ public class Area2Spawning : MonoBehaviour
 
     private void Start()
     {
-        CheckCurrentLevel();
+        GetCurrentLevel();
+        SetScoreAndLogistics();
     }
 
     // spawn deliverers
@@ -84,25 +87,30 @@ public class Area2Spawning : MonoBehaviour
         scoreManagerBlue.BlueScore2++;
     }
     
-    // Check the areas upgradeable buildings current level and set the deliverer amount according to that
-    private void CheckCurrentLevel()
+    // Check the areas upgradeable buildings current level
+    private void GetCurrentLevel()
     {
-        if (PlayerPrefs.GetInt("Garden") == 2)
+        buildingsLvl = building.GetComponent<saveLevel>().lvlOfBuilding;
+    }
+    
+    // Set the logisticscap and max. deliverer amount according to the buildings level
+    private void SetScoreAndLogistics()
+    {
+        switch (buildingsLvl)
         {
-            scoreManagerBlue.BlueScore2 = 6;
-            logisticsCap = 6;
-            return;
+            case 2:
+                scoreManagerBlue.BlueScore2 = 6;
+                logisticsCap = 6;
+                return;
+            case 1:
+                scoreManagerBlue.BlueScore2 = 4;
+                logisticsCap = 4;
+                return;
+            case 0:
+                scoreManagerBlue.BlueScore2 = 2;
+                logisticsCap = 2;
+                return;
         }
-        
-        if (PlayerPrefs.GetInt("Garden") == 1)
-        {
-            scoreManagerBlue.BlueScore2 = 4;
-            logisticsCap = 4;
-            return;
-        }
-        
-        scoreManagerBlue.BlueScore2 = 2;
-        logisticsCap = 2;
     }
     
     // Method to add deliverers and logistics cap along with upgrade levels
