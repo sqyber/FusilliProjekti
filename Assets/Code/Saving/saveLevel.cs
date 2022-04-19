@@ -8,8 +8,6 @@ public class saveLevel : MonoBehaviour
     [SerializeField] private GameObject building;
     [SerializeField] private String buildingName;
 
-    [SerializeField] private GameObject reset;
-
     private int levelOfBuilding;
 
     public int lvlOfBuilding
@@ -20,10 +18,7 @@ public class saveLevel : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        if (reset.GetComponent<ResetScore>().tglLvlReset == false)
-        {
-            GetLevel();
-        }
+        GetLevel();
     }
 
     // Update is called once per frame
