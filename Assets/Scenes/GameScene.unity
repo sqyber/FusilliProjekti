@@ -11703,10 +11703,10 @@ MonoBehaviour:
   upgradeButton: {fileID: 1258406423}
   scoreManager: {fileID: 1675763622}
   building: {fileID: 513922501}
-  thresholdOneValue: 0
-  thresholdTwoValue: 0
-  greenScoreModifierLvl1: 2
-  greenScoreModifierLvl2: 3
+  thresholdOneValue: 100
+  thresholdTwoValue: 200
+  greenScoreModifierLvl1: 1.1
+  greenScoreModifierLvl2: 1.2
   levels:
   - {fileID: 222370904}
   - {fileID: 1861664504}
@@ -25215,10 +25215,10 @@ MonoBehaviour:
   upgradeButton: {fileID: 1900499858}
   scoreManager: {fileID: 1675763622}
   building: {fileID: 1135021406}
-  thresholdOneValue: 0
-  thresholdTwoValue: 0
-  greenScoreModifierLvl1: 1
-  greenScoreModifierLvl2: 1
+  thresholdOneValue: 300
+  thresholdTwoValue: 400
+  greenScoreModifierLvl1: 1.3
+  greenScoreModifierLvl2: 1.4
   levels:
   - {fileID: 1455423167}
   - {fileID: 727541378}
@@ -28537,10 +28537,10 @@ MonoBehaviour:
   upgradeButton: {fileID: 843644039}
   scoreManager: {fileID: 1675763622}
   building: {fileID: 1308876695}
-  thresholdOneValue: 0
-  thresholdTwoValue: 0
-  greenScoreModifierLvl1: 1
-  greenScoreModifierLvl2: 1
+  thresholdOneValue: 900
+  thresholdTwoValue: 1000
+  greenScoreModifierLvl1: 1.9
+  greenScoreModifierLvl2: 2
   levels:
   - {fileID: 749246553}
   - {fileID: 726704802}
@@ -66148,10 +66148,10 @@ MonoBehaviour:
   upgradeButton: {fileID: 1663028652}
   scoreManager: {fileID: 1675763622}
   building: {fileID: 1371518294}
-  thresholdOneValue: 0
-  thresholdTwoValue: 0
-  greenScoreModifierLvl1: 1
-  greenScoreModifierLvl2: 1
+  thresholdOneValue: 500
+  thresholdTwoValue: 600
+  greenScoreModifierLvl1: 1.5
+  greenScoreModifierLvl2: 1.6
   levels:
   - {fileID: 351914666}
   - {fileID: 648004782}
@@ -66958,10 +66958,10 @@ MonoBehaviour:
   upgradeButton: {fileID: 1327537508}
   scoreManager: {fileID: 1675763622}
   building: {fileID: 1432149415}
-  thresholdOneValue: 0
-  thresholdTwoValue: 0
-  greenScoreModifierLvl1: 1
-  greenScoreModifierLvl2: 1
+  thresholdOneValue: 700
+  thresholdTwoValue: 800
+  greenScoreModifierLvl1: 1.7
+  greenScoreModifierLvl2: 1.8
   levels:
   - {fileID: 500153767}
   - {fileID: 647334374}
