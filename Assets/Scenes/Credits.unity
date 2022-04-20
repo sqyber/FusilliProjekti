@@ -1269,9 +1269,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "The game was brought to you by the 21TIKO3B team\n\nProgramming:\nSamu
-    Pulli & Lauri Kalliola\n\nGraphics:\nSilja S\xE4ps\xE4\n\nScrummaster:\nNiklas
-    Sallinen"
+  m_text: "Pelin tarjoaa\n21TIKO3B\n\nOhjelmointi:\nSamu Pulli & Lauri Kalliola\n\nGrafiikka:\nSilja
+    S\xE4ps\xE4\n\nScrummaster:\nNiklas Sallinen"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 991bf8edfd4da1d409483de7083e6409, type: 2}
   m_sharedMaterial: {fileID: 4591388747190964887, guid: 991bf8edfd4da1d409483de7083e6409, type: 2}
