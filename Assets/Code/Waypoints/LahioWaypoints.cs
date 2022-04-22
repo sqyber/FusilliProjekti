@@ -16,17 +16,8 @@ public enum Status
 }
 public class LahioWaypoints : Waypoints
 {
-
-
-    
     System.Random rnd = new System.Random();
-
-
-
     
-
-    
-
     public override Transform GetNextWaypoint(Transform currentWaypoint, ref Status statuscheck)
     {
         
@@ -35,31 +26,25 @@ public class LahioWaypoints : Waypoints
             //Move to first waypoint
             statuscheck = Status.Arriving;
             return transform.GetChild(0);
-            
-
         }
 
         if (currentWaypoint.GetSiblingIndex() == 0 && statuscheck != Status.Delivered )
         {
             statuscheck = Status.Arrived;
             //pick random house
-
         }
+        
         if (currentWaypoint.GetSiblingIndex() !=0 )
         {
             statuscheck = Status.Delivered;
-            
-
         }
-
         else if (statuscheck == Status.Delivered )
         {
             
             //change bool to mark delivery done and prepare for next waypoint system
             statuscheck = Status.Leaving;
         }
-
-      
+        
         // gives number between 1 and child count
         int housenumber = rnd.Next(1, transform.childCount);
         // marks for lahetti to move to next rail
@@ -93,8 +78,6 @@ public class LahioWaypoints : Waypoints
                 
                 GetNextSystem();
                 break;
-
-            
         }
         return null;
     }

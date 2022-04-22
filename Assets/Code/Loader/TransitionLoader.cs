@@ -10,7 +10,7 @@ public class TransitionLoader : MonoBehaviour
 
     [SerializeField] private float transitionTime = 1f;
     [SerializeField] private int nextSceneIndex;
-
+    
     // Public function used in buttons
     public void LoadNextScene()
     {

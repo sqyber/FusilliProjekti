@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class RoadWaypoint : Waypoints
 {
-
-
     // 
     public override Transform GetNextWaypoint(Transform currentWaypoint, ref Status statuscheck)
     {
@@ -27,10 +25,8 @@ public class RoadWaypoint : Waypoints
             //Changes the waypoint rail
             GetNextSystem();
         }
-        
-        
+
         //move to the next waypoint system
         return null;
-         
     }
 }
