@@ -19,8 +19,6 @@ public class Area1Spawning : MonoBehaviour
     
     private ScoreManager scoreManagerBlue;
 
-    private int logisticsCap;
-
     private void Awake()
     {
         scoreManagerBlue = FindObjectOfType<ScoreManager>();
@@ -57,21 +55,6 @@ public class Area1Spawning : MonoBehaviour
         DelivererToArray();
     }
     
-    // despawn the last deliverer that was spawned
-    public void DespawnLast()
-    {
-        // Check if lists index value is below zero, if yes then return
-        // otherwise destroy the last object in the list
-        if (scoreManagerBlue.BlueScore1 >= logisticsCap || deliverers.Count - 1 < 0) return;
-        
-        Destroy(deliverers[deliverers.Count - 1]);
-        deliverers.RemoveAt(deliverers.Count - 1);
-        spawnedDeliverer = null;
-            
-        // reduce logistics score to track the amount of deliverers on the UI
-        scoreManagerBlue.BlueScore1++;
-    }
-
     private void DelivererToArray()
     {
         // add the spawnedDeliverer to the list initialized earlier
@@ -87,7 +70,6 @@ public class Area1Spawning : MonoBehaviour
     private void SetBaseValues()
     {
         scoreManagerBlue.BlueScore1 = 6;
-        logisticsCap = 6;
     }
 
     private void CheckArraySize()

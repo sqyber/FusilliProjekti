@@ -23,9 +23,6 @@ public class Area5Spawning : MonoBehaviour
     
     private ScoreManager scoreManagerBlue;
 
-    // switch to 6 when third area is created
-    private int logisticsCap = 4;
-
     private void Awake()
     {
         scoreManagerBlue = FindObjectOfType<ScoreManager>();
@@ -68,27 +65,7 @@ public class Area5Spawning : MonoBehaviour
             scoreManagerBlue.BlueScore5--;
         }
     }
-    
-    // despawn the last deliverer that was spawned
-    public void DespawnLast()
-    {
-        // Check if lists index value is below zero, if yes then return
-        // otherwise destroy the last object in the list
-        if (deliverers.Count - 1 < 0)
-        {
-            return;
-        }
 
-        if (scoreManagerBlue.BlueScore5 >= logisticsCap) return;
-        
-        Destroy(deliverers[deliverers.Count - 1]);
-        deliverers.RemoveAt(deliverers.Count - 1);
-        spawnedDeliverer = null;
-            
-        // reduce logistics score to track the amount of deliverers on the UI
-        scoreManagerBlue.BlueScore5++;
-    }
-    
     // Check the areas upgradeable buildings current level
     private void GetCurrentLevel()
     {
@@ -102,15 +79,12 @@ public class Area5Spawning : MonoBehaviour
         {
             case 2:
                 scoreManagerBlue.BlueScore5 = 6;
-                logisticsCap = 6;
                 return;
             case 1:
                 scoreManagerBlue.BlueScore5 = 4;
-                logisticsCap = 4;
                 return;
             case 0:
                 scoreManagerBlue.BlueScore5 = 2;
-                logisticsCap = 2;
                 return;
         }
     }
@@ -119,6 +93,5 @@ public class Area5Spawning : MonoBehaviour
     public void AddDeliverersArea5()
     {
         scoreManagerBlue.BlueScore5 += 2;
-        logisticsCap += 2;
     }
 }

@@ -7,7 +7,6 @@ public class CameraMovement : MonoBehaviour
 {
     // These are used to prevent camera movement while a menu is open.
     [SerializeField] private GameObject helpMenu;
-    [SerializeField] private GameObject spawnMenu;
 
     [SerializeField] private float zoomOutMin = 5;
     [SerializeField] private float zoomOutMax = 9;
@@ -29,7 +28,7 @@ public class CameraMovement : MonoBehaviour
     private void LateUpdate()
     {
         // Check if either of the menus is active, if yes then return
-        if (helpMenu.activeSelf || spawnMenu.activeSelf)
+        if (helpMenu.activeSelf)
         {
             return;
         }

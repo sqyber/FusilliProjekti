@@ -253,12 +253,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1634426007}
-  m_RootOrder: 0
+  m_Father: {fileID: 1999865734}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.0000019073486, y: 34.2}
+  m_AnchoredPosition: {x: 88, y: -20.3}
   m_SizeDelta: {x: 240.0162, y: 76.5112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &162206349
@@ -1135,7 +1135,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -5.1, y: -0.0000009536743}
+  m_AnchoredPosition: {x: -5.1, y: -15.7}
   m_SizeDelta: {x: 147.0862, y: 96.9325}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1553916635
@@ -1202,8 +1202,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 162206348}
+  m_Children: []
   m_Father: {fileID: 1864021152}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1246,7 +1245,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000076293945, y: -5.1}
+  m_AnchoredPosition: {x: 0.0000076293945, y: -17.6}
   m_SizeDelta: {x: 314.6679, y: 147.8531}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1799668785
@@ -1269,8 +1268,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pelin tarjoaa\n21TIKO3B\n\nOhjelmointi:\nSamu Pulli & Lauri Kalliola\n\nGrafiikka:\nSilja
-    S\xE4ps\xE4\n\nScrummaster:\nNiklas Sallinen"
+  m_text: "Pelin tarjoaa\n21TIKO3B\n\nOhjelmointi & level design:\nSamu Pulli & Lauri
+    Kalliola\n\nGrafiikka:\nSilja S\xE4ps\xE4\n\nScrummaster:\nNiklas Sallinen"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 991bf8edfd4da1d409483de7083e6409, type: 2}
   m_sharedMaterial: {fileID: 4591388747190964887, guid: 991bf8edfd4da1d409483de7083e6409, type: 2}
@@ -1564,6 +1563,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2010987793}
+  - {fileID: 162206348}
   m_Father: {fileID: 1864021152}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1606,7 +1606,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 16.5, y: 0.0000014305115}
+  m_AnchoredPosition: {x: 35.6, y: 23.200003}
   m_SizeDelta: {x: 156.04132, y: 94.187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2010987794

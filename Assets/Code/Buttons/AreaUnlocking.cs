@@ -5,7 +5,6 @@ using UnityEngine;
 public class AreaUnlocking : MonoBehaviour
 {
     [SerializeField] private GameObject building;
-    [SerializeField] private GameObject nextAreaMinus;
     [SerializeField] private GameObject nextAreaPlus;
     [SerializeField] private GameObject nextAreaLogistics;
 
@@ -33,7 +32,6 @@ public class AreaUnlocking : MonoBehaviour
     {
         if (!buildingLvl2) return;
         
-        nextAreaMinus.SetActive(true);
         nextAreaPlus.SetActive(true);
         nextAreaLogistics.SetActive(true);
     }
@@ -43,7 +41,6 @@ public class AreaUnlocking : MonoBehaviour
     {
         if (buildingLvl2) return;
         
-        nextAreaMinus.SetActive(false);
         nextAreaPlus.SetActive(false);
         nextAreaLogistics.SetActive(false);
     }
