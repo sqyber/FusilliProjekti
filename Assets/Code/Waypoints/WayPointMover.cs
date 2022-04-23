@@ -11,12 +11,17 @@ public class WayPointMover : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private Button delivered;
     
+    [SerializeField] private Animator animator;
+    private float deadzone = 0.2f;
+    private float xDifference;
+    private float yDifference;
+
     private Transform currentWaypoint;
     private bool IsMoving = true;
     
     public Status lahetti;
     
-    void Start()
+    private void Start()
     {
         //set initial position to the first waypoint
         currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint, ref lahetti);
@@ -29,32 +34,15 @@ public class WayPointMover : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (!IsMoving)
         {
+            SetAnimatorBools();
             return;
         }
-        
-        transform.position =
-            Vector2.MoveTowards(transform.position, currentWaypoint.position, moveSpeed * Time.deltaTime);
-        if (Vector2.Distance(transform.position, currentWaypoint.position) < 0.1)
-        {
-            
-            if (lahetti == Status.Arrived)
-            {
-                IsMoving = false;
-                delivered.gameObject.SetActive(true);
-            }
-            
-            currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint, ref lahetti);
-            
-            if (currentWaypoint == null)
-            {
-                waypoints = waypoints.GetNextSystem();
-                currentWaypoint = waypoints.GetNextWaypoint(null, ref lahetti);
-            }
-        }
+        CalculateDirection();
+        MoveCharacter();
     }
 
     public void OnDelivered()
@@ -63,5 +51,74 @@ public class WayPointMover : MonoBehaviour
 
         IsMoving = true;
         waypoints.ResetDelivered();
+    }
+
+    // Function used to move the character
+    private void MoveCharacter()
+    {
+        transform.position =
+            Vector2.MoveTowards(transform.position, currentWaypoint.position, moveSpeed * Time.deltaTime);
+        if (Vector2.Distance(transform.position, currentWaypoint.position) < 0.1)
+        {
+            if (lahetti == Status.Arrived)
+            {
+                IsMoving = false;
+                delivered.gameObject.SetActive(true);
+            }
+            
+            currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint, ref lahetti);
+            
+            if (currentWaypoint != null)
+            {
+                return;
+            }
+            
+            waypoints = waypoints.GetNextSystem();
+            currentWaypoint = waypoints.GetNextWaypoint(null, ref lahetti);
+        }
+    }
+
+    // Function used to calculate the direction differences from currentposition to next position and then applying the
+    // correct animation based on that
+    private void CalculateDirection()
+    {
+        xDifference = transform.position.x - currentWaypoint.position.x;
+        yDifference = transform.position.y - currentWaypoint.position.y;
+        
+        if (xDifference < deadzone)
+        {
+            SetAnimatorBools();
+            animator.SetBool("goingEast", true);
+            return;
+        }
+
+        if (xDifference > deadzone)
+        {
+            SetAnimatorBools();
+            animator.SetBool("goingWest", true);
+            return;
+        }
+
+        if (yDifference < deadzone)
+        {
+            SetAnimatorBools();
+            animator.SetBool("goingNorth", true);
+            return;
+        }
+
+        if (yDifference > deadzone)
+        {
+            SetAnimatorBools();
+            animator.SetBool("goingSouth", true);
+        }
+    }
+
+    // function to reset animation bools
+    private void SetAnimatorBools()
+    {
+        animator.SetBool("goingNorth", false);
+        animator.SetBool("goingSouth", false);
+        animator.SetBool("goingEast", false);
+        animator.SetBool("goingWest", false);
     }
 }
