@@ -102,7 +102,7 @@ public class UpgradeSystem : MonoBehaviour
         }
     }
 
-    // Method to activate button 1
+    // Function to activate button 1
     private void ActivateButton()
     {
         if (thresholdOne && current_level == 0)

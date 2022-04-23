@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,7 @@ public class Area5Spawning : MonoBehaviour
     [SerializeField] private GameObject delivererRoute1;
     [SerializeField] private GameObject delivererRoute2;
     //[SerializeField] private GameObject delivererRoute3;
-    
+
     // define areas upgradeable building
     [SerializeField] private GameObject building;
     
@@ -21,7 +22,7 @@ public class Area5Spawning : MonoBehaviour
     // Initializing a list for deliverers
     private List<GameObject> deliverers = new List<GameObject>();
     
-    private ScoreManager scoreManagerBlue;
+    [NonSerialized] public ScoreManager scoreManagerBlue;
 
     private void Awake()
     {
@@ -89,7 +90,7 @@ public class Area5Spawning : MonoBehaviour
         }
     }
     
-    // Method to add deliverers and logistics cap along with upgrade levels
+    // Function to add deliverers and logistics cap along with upgrade levels
     public void AddDeliverersArea5()
     {
         scoreManagerBlue.BlueScore5 += 2;

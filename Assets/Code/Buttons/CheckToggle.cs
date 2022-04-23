@@ -19,6 +19,10 @@ public class CheckToggle : MonoBehaviour
         CheckAndSetToggle();
     }
 
+    // Set the toggle based on the value set in the playerprefs
+    // ie. if the player has chosen the music to be off
+    // the value is 0 and therefore the toggle is off
+    // and so is the music
     private void CheckAndSetToggle()
     {
         if (musicValue == 0)

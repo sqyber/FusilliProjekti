@@ -8,6 +8,9 @@ public class SingleAudioManager : MonoBehaviour
 {
     private static SingleAudioManager instance;
 
+    // Set the gameobject the script is attatched to be an object
+    // that isn't destroyed on load and to destroy the
+    // duplicates that might be caused by this
     private void Awake()
     {
         if (instance != null)

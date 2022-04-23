@@ -13,6 +13,9 @@ public class MusicToggle : MonoBehaviour
         musicPlayer = FindInActiveObjectByName("BackgroundMusic");
     }
 
+    // On toggle check if the toggle isn't on, then set the playerpref value for the
+    // music to 0 and turn off the musicplayer
+    // Otherwise set the value to 1 and turn the musicplayer on
     public void OnToggle()
     {
         if (!toggle.GetComponent<Toggle>().isOn)

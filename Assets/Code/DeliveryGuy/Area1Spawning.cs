@@ -17,7 +17,7 @@ public class Area1Spawning : MonoBehaviour
     // Initializing a list for deliverers
     private List<GameObject> deliverers = new List<GameObject>();
     
-    private ScoreManager scoreManagerBlue;
+    public ScoreManager scoreManagerBlue;
 
     private void Awake()
     {
@@ -67,11 +67,15 @@ public class Area1Spawning : MonoBehaviour
         scoreManagerBlue.BlueScore1--;
     }
 
+    // The base value for the first area
     private void SetBaseValues()
     {
         scoreManagerBlue.BlueScore1 = 6;
     }
 
+    // Fix for a UI bug
+    // Checks if the array is full, and if it is it keeps the free deliverer count
+    // at 0
     private void CheckArraySize()
     {
         if (deliverers.Count == 6)

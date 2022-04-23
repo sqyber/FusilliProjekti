@@ -89,6 +89,7 @@ public class CameraMovement : MonoBehaviour
         }
     }
 
+    // Simple zoom function for the camera
     private void Zoom(float increment)
     {
         Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, zoomOutMin, zoomOutMax);

@@ -12,7 +12,7 @@ public class WayPointMover : MonoBehaviour
     [SerializeField] private Button delivered;
     
     [SerializeField] private Animator animator;
-    private float deadzone = 0.2f;
+    private float deadzone = 0.3f;
     private float xDifference;
     private float yDifference;
 
@@ -38,7 +38,6 @@ public class WayPointMover : MonoBehaviour
     {
         if (!IsMoving)
         {
-            SetAnimatorBools();
             return;
         }
         CalculateDirection();
@@ -63,6 +62,7 @@ public class WayPointMover : MonoBehaviour
             if (lahetti == Status.Arrived)
             {
                 IsMoving = false;
+                SetAnimatorBools();
                 delivered.gameObject.SetActive(true);
             }
             
@@ -82,31 +82,34 @@ public class WayPointMover : MonoBehaviour
     // correct animation based on that
     private void CalculateDirection()
     {
-        xDifference = transform.position.x - currentWaypoint.position.x;
-        yDifference = transform.position.y - currentWaypoint.position.y;
+        Vector2 currentPos = transform.position;
+        Vector2 currentWaypointPos = currentWaypoint.position;
         
-        if (xDifference < deadzone)
+        xDifference = Mathf.Abs(currentPos.x - currentWaypointPos.x);
+        yDifference = Mathf.Abs(currentPos.y - currentWaypointPos.y);
+        
+        if (currentPos.x  < currentWaypointPos.x && yDifference < deadzone)
         {
             SetAnimatorBools();
             animator.SetBool("goingEast", true);
             return;
         }
 
-        if (xDifference > deadzone)
+        if (currentPos.x  > currentWaypointPos.x && yDifference < deadzone)
         {
             SetAnimatorBools();
             animator.SetBool("goingWest", true);
             return;
         }
 
-        if (yDifference < deadzone)
+        if (currentPos.y < currentWaypointPos.y && xDifference < deadzone)
         {
             SetAnimatorBools();
             animator.SetBool("goingNorth", true);
             return;
         }
 
-        if (yDifference > deadzone)
+        if (currentPos.y > currentWaypointPos.y && xDifference < deadzone)
         {
             SetAnimatorBools();
             animator.SetBool("goingSouth", true);

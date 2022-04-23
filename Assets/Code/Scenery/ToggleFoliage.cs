@@ -14,6 +14,7 @@ public class ToggleFoliage : MonoBehaviour
         ChangeFoliage();
     }    
     
+    // Function to change foliage based on the buildings level
     private void ChangeFoliage()
     {
         if (building.GetComponent<UpgradeSystem>().current_lvl == 0)
