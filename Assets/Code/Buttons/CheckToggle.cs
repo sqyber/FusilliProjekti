@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class CheckToggle : MonoBehaviour
 {
     [SerializeField] private GameObject toggle;
-    private int musicValue;
+    private int savedValue;
 
     private void Awake()
     {
-        musicValue = PlayerPrefs.GetInt("Music");
+        savedValue = PlayerPrefs.GetInt(toggle.GetComponent<SoundToggle>().SavedVariableName, 1);
     }
     
     // Start is called before the first frame update
@@ -25,7 +25,7 @@ public class CheckToggle : MonoBehaviour
     // and so is the music
     private void CheckAndSetToggle()
     {
-        if (musicValue == 0)
+        if (savedValue == 0)
         {
             toggle.GetComponent<Toggle>().isOn = false;
             return;

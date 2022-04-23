@@ -1,36 +1,45 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MusicToggle : MonoBehaviour
+public class SoundToggle : MonoBehaviour
 {
     [SerializeField] private GameObject toggle;
-    [SerializeField] private GameObject musicPlayer;
+    [SerializeField] private GameObject soundPlayer;
+    [SerializeField] private String targetObjectName;
+    [SerializeField] private String savedVariableName;
+
+    public String SavedVariableName
+    {
+        get { return savedVariableName; }
+    }
 
     private void Awake()
     {
-        musicPlayer = FindInActiveObjectByName("BackgroundMusic");
+        soundPlayer = FindInActiveObjectByName(targetObjectName);
     }
 
     // On toggle check if the toggle isn't on, then set the playerpref value for the
-    // music to 0 and turn off the musicplayer
-    // Otherwise set the value to 1 and turn the musicplayer on
+    // sound to 0 and turn off the soundplayer
+    // Otherwise set the value to 1 and turn the soundplayer on
     public void OnToggle()
     {
         if (!toggle.GetComponent<Toggle>().isOn)
         {
-            PlayerPrefs.SetInt("Music", 0);
-            musicPlayer.SetActive(false);
+            PlayerPrefs.SetInt(savedVariableName, 0);
+            soundPlayer.SetActive(false);
             return;
         }
         
-        PlayerPrefs.SetInt("Music", 1);
-        musicPlayer.SetActive(true);
+        PlayerPrefs.SetInt(savedVariableName, 1);
+        soundPlayer.SetActive(true);
     }
     
-    // Used to find the object that plays the background music, so that
+    // Used to find the object that plays the sound, so that
     // toggling it works even if it was inactive when a scene was loaded
+    // (Not really used for SFX, but only for music)
     private static GameObject FindInActiveObjectByName(string name)
     {
         Transform[] objects = Resources.FindObjectsOfTypeAll<Transform>() as Transform[];
