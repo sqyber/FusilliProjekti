@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Strings_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: bfa826060595e9c43b124d2b9b1dce52, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 43151265792
+    m_Localized: To begin playing open the delivery menu by tapping the button on
+      the bottom left corner of the main screen. (Picture on the left)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1629160214528
+    m_Localized: Tap the buttons (picture on the left) in the management menu to
+      send out the deliverers. (The delivery menu button flashes if you have free
+      deliverers)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3817928396800
+    m_Localized: Deliveries
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4272356069376
+    m_Localized: Scores
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4293461807104
+    m_Localized: Upgrades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2524837056512
+    m_Localized: 'Tap the deliverers button to free them from a delivery and gain
+      scores (picture on the left).
+
+
+      The green points depict sustainability
+      and greenness.
+
+
+      The yellow points depict customer satisfaction.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3289680973824
+    m_Localized: 'When the customer satisfaction goes up, you unlock differnet buildings
+      with which you improve the sustainability of your shop.
+
+
+      The upgrades
+      increase the amount of green points you get for deliveries.
+
+
+      When there
+      are upgrades availaible, a text appears to the top part of the screen, and
+      an upgradebutton appears on top of the buildings. (Picture on left)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5706095005696
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5751624175616
+    m_Localized: Sound effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5838718898176
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5887045668864
+    m_Localized: Start over
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5949863759872
+    m_Localized: Tap "quit" to close the game.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6051911176192
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6069720190976
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6138599051264
+    m_Localized: Tap "yes" if you want to start over.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6164746342400
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6176687525888
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6324557713408
+    m_Localized: Continue game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6299077316608
+    m_Localized: 'Congratulations! You have achieved all your goals and made your
+      city more sustainable and green!
+
+
+      (The games content ends here)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6611234197504
+    m_Localized: Building upgrade available!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6754226409472
+    m_Localized: "The game was brought to you by\n21TIKO3B\n\nProgramming & level
+      design:\nSamu Pulli & Lauri Kalliola\n\nGraphics:\nSilja S\xE4ps\xE4\n\nScrummaster:\nNiklas
+      Sallinen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7200026398720
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25492103368704
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Strings_fi
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fi
+  m_SharedData: {fileID: 11400000, guid: bfa826060595e9c43b124d2b9b1dce52, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 43151265792
+    m_Localized: "Aloittaaksesi peli, avaa l\xE4hettivalikko napauttamalla p\xE4\xE4ruudunvasemmassa
+      alakulmassa olevaa nappia. (Kuva vasemmalla)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1629160214528
+    m_Localized: "Napauta l\xE4hettivalikossa olevia nappeja (kuva vasemmalla) l\xE4hett\xE4\xE4ksesi
+      l\xE4hettej\xE4 alueille. (L\xE4hettivalikon nappi vilkkuu, jos sinulla on
+      vapaita l\xE4hettej\xE4)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2524837056512
+    m_Localized: "Napauta l\xE4hetin nappia vapauttaaksesi l\xE4hetti kuljetukselta
+      ja saadaksesi pisteit\xE4 (kuva vasemmalla).\n\nVihre\xE4t pisteet kuvastavat
+      kest\xE4vyytt\xE4 ja vihreytt\xE4.\n\nKeltaiset pisteet kuvastavat asiakastyytyv\xE4isyytt\xE4."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3289680973824
+    m_Localized: "Asiakastyytyv\xE4isyyden noustessa avautuu k\xE4ytt\xF6\xF6si erilaisia
+      rakennuksia, joiden avulla parannat kauppasi kest\xE4vyytt\xE4.\n\nP\xE4ivitykset
+      nostavat vihreiden pisteiden m\xE4\xE4r\xE4\xE4, jonka l\xE4hetyksist\xE4 saa.\n\nKun
+      p\xE4ivityksi\xE4 on saatavilla, ilmestyy ruudun yl\xE4osaan siit\xE4 kertova
+      teksti, sek\xE4 rakennusten p\xE4\xE4lle ilmestyy p\xE4ivitysnappi. (Kuva vasemmalla)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3817928396800
+    m_Localized: "L\xE4hetit"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4272356069376
+    m_Localized: Pisteet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4293461807104
+    m_Localized: "P\xE4ivitykset"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5706095005696
+    m_Localized: Musiikki
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5751624175616
+    m_Localized: "\xC4\xE4niefektit"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5838718898176
+    m_Localized: Lopputekstit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5887045668864
+    m_Localized: Aloita alusta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5949863759872
+    m_Localized: Napauta "lopeta" sulkeaksesi peli.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6051911176192
+    m_Localized: Lopeta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6069720190976
+    m_Localized: Jatka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6138599051264
+    m_Localized: "Napauta \"kyll\xE4\", jos haluat aloittaa pelin alusta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6164746342400
+    m_Localized: "Kyll\xE4"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6176687525888
+    m_Localized: Ei
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6324557713408
+    m_Localized: "Jatka peli\xE4"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6299077316608
+    m_Localized: "Onneksi olkoon! Olet saavuttanut tavoitteesi ja luonut kaupungistasi
+      kest\xE4v\xE4mm\xE4n ja vihre\xE4mm\xE4n!\n\n(Pelin sis\xE4lt\xF6 p\xE4\xE4ttyy
+      t\xE4h\xE4n)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6611234197504
+    m_Localized: "Rakennuksen p\xE4ivitys saatavilla!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6754226409472
+    m_Localized: "Pelin tarjoaa\n21TIKO3B\n\nOhjelmointi & level design:\nSamu Pulli
+      & Lauri Kalliola\n\nGrafiikka:\nSilja S\xE4ps\xE4\n\nScrummaster:\nNiklas Sallinen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7200026398720
+    m_Localized: Takaisin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25492103368704
+    m_Localized: Kieli
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1
