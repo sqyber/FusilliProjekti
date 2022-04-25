@@ -25,15 +25,14 @@ public class CheckSavedLocale : MonoBehaviour
         LocalizationSettings.SelectedLocale = english;
     }
 
-    public void ChangeLocale()
+    public void ChangeLocaleToEnglish()
     {
-        if (LocalizationSettings.SelectedLocale == finnish)
-        {
-            LocalizationSettings.SelectedLocale = english;
-            PlayerPrefs.SetInt("Language", 1);
-            return;
-        }
+        LocalizationSettings.SelectedLocale = english;
+        PlayerPrefs.SetInt("Language", 1);
+    }
 
+    public void ChangeLocaleToFinnish()
+    {
         LocalizationSettings.SelectedLocale = finnish;
         PlayerPrefs.SetInt("Language", 0);
     }

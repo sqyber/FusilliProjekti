@@ -19,8 +19,8 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 43151265792
-    m_Localized: "Aloittaaksesi peli, avaa l\xE4hettivalikko napauttamalla p\xE4\xE4ruudunvasemmassa
-      alakulmassa olevaa nappia. (Kuva vasemmalla)"
+    m_Localized: "Aloittaaksesi pelin, avaa l\xE4hettivalikko napauttamalla p\xE4\xE4ruudun
+      vasemmassa alakulmassa olevaa nappia. (Kuva vasemmalla)"
     m_Metadata:
       m_Items: []
   - m_Id: 1629160214528
