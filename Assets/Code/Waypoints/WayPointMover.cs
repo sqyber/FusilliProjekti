@@ -62,8 +62,8 @@ public class WayPointMover : MonoBehaviour
             if (lahetti == Status.Arrived)
             {
                 IsMoving = false;
-                SetAnimatorBools();
                 delivered.gameObject.SetActive(true);
+                SetAnimatorBools();
             }
             
             currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint, ref lahetti);

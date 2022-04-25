@@ -17,7 +17,12 @@ public class Area1Spawning : MonoBehaviour
     // Initializing a list for deliverers
     private List<GameObject> deliverers = new List<GameObject>();
     
-    public ScoreManager scoreManagerBlue;
+    private ScoreManager scoreManagerBlue;
+
+    public int Bluescore1
+    {
+        get { return scoreManagerBlue.BlueScore1; }
+    }
 
     private void Awake()
     {

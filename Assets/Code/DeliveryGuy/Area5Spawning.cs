@@ -22,7 +22,12 @@ public class Area5Spawning : MonoBehaviour
     // Initializing a list for deliverers
     private List<GameObject> deliverers = new List<GameObject>();
     
-    [NonSerialized] public ScoreManager scoreManagerBlue;
+    private ScoreManager scoreManagerBlue;
+    
+    public int Bluescore5
+    {
+        get { return scoreManagerBlue.BlueScore5; }
+    }
 
     private void Awake()
     {
