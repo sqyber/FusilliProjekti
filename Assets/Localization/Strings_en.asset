@@ -20,13 +20,12 @@ MonoBehaviour:
   m_TableData:
   - m_Id: 43151265792
     m_Localized: To begin playing open the delivery menu by tapping the button on
-      the bottom left corner of the main screen. (Picture on the left)
+      the bottom left corner of the main screen.
     m_Metadata:
       m_Items: []
   - m_Id: 1629160214528
-    m_Localized: Tap the buttons (picture on the left) in the management menu to
-      send out the deliverers. (The delivery menu button flashes if you have free
-      deliverers)
+    m_Localized: Tap the buttons in the management menu to send out the deliverers.
+      (The delivery menu button flashes if you have free deliverers)
     m_Metadata:
       m_Items: []
   - m_Id: 3817928396800
@@ -43,11 +42,11 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2524837056512
     m_Localized: 'Tap the deliverers button to free them from a delivery and gain
-      scores (picture on the left).
+      scores.
 
 
-      The green points depict sustainability
-      and greenness.
+      The green points depict sustainability and the game worlds
+      greenery.
 
 
       The yellow points depict customer satisfaction.'
@@ -64,7 +63,7 @@ MonoBehaviour:
 
       When there
       are upgrades availaible, a text appears to the top part of the screen, and
-      an upgradebutton appears on top of the buildings. (Picture on left)'
+      an upgrade button appears on top of the buildings.'
     m_Metadata:
       m_Items: []
   - m_Id: 5706095005696
