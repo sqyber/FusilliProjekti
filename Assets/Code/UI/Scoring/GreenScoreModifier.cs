@@ -31,8 +31,7 @@ public class GreenScoreModifier : MonoBehaviour
         get { return scoreManagerGreen.GreenScore; }
     }
     
-    // Start is called before the first frame update
-    private void Start()
+    private void Awake()
     {
         scoreManagerGreen = FindObjectOfType<ScoreManager>();
         scoreManagerGreen.GreenScore = PlayerPrefs.GetInt("GreenScore", 0);

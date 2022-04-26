@@ -5,6 +5,8 @@ using UnityEngine.Localization.Settings;
 
 public class GameScreenTextSet : MonoBehaviour
 {
+    // Text gameobjects that are localized and need to be changed
+    // when switching locale
     [SerializeField] private TextMeshProUGUI helpPageOneTop;
     [SerializeField] private TextMeshProUGUI helpPageOneBottom;
     [SerializeField] private TextMeshProUGUI helpPageOneBtn1;
@@ -33,6 +35,7 @@ public class GameScreenTextSet : MonoBehaviour
     [SerializeField] private TextMeshProUGUI endOfGameBtn;
     [SerializeField] private TextMeshProUGUI upgradeReadyText;
 
+    // LocalizedStrings for each text
     [SerializeField] private LocalizedString localizedHelpPageOneTop;
     [SerializeField] private LocalizedString localizedHelpPageOneBottom;
     [SerializeField] private LocalizedString localizedHelpPageBtn1;
@@ -76,6 +79,7 @@ public class GameScreenTextSet : MonoBehaviour
         LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
     }
 
+    // Set the texts as their localized version
     private void SetTexts()
     {
         helpPageOneTop.text = localizedHelpPageOneTop.GetLocalizedString();
