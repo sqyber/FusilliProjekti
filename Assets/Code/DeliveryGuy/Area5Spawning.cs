@@ -8,7 +8,6 @@ public class Area5Spawning : MonoBehaviour
     // define the delivery guy objects
     [SerializeField] private GameObject delivererRoute1;
     [SerializeField] private GameObject delivererRoute2;
-    //[SerializeField] private GameObject delivererRoute3;
 
     // define areas upgradeable building
     [SerializeField] private GameObject building;
@@ -56,11 +55,7 @@ public class Area5Spawning : MonoBehaviour
             {
                 spawnedDeliverer = Instantiate(delivererRoute2, transform.position, Quaternion.identity);
             }
-            /*else if (deliverers.Count <= 5)
-            {
-                spawnedDeliverer = Instantiate(delivererRoute3, transform.position, Quaternion.identity);
-            }*/
-        
+
             // add the spawnedDeliverer to the list initialized earlier
             deliverers.Add(spawnedDeliverer);
         
