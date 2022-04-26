@@ -45,6 +45,8 @@ public class GreenScoreModifier : MonoBehaviour
     // Method to add GreenScore (used to track green upgrades ie. ground etc.)
     public void AddScore()
     {
+        if (henhouse.GetComponent<UpgradeSystem>().current_lvl == 0) return;
+        
         multipliedScore = score * multiplier;
         scoreManagerGreen.GreenScore += (int)multipliedScore;
     }
