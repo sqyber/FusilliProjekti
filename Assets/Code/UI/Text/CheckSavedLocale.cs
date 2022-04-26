@@ -10,7 +10,7 @@ public class CheckSavedLocale : MonoBehaviour
     private int languageValue;
     private void Awake()
     {
-        languageValue = PlayerPrefs.GetInt("Language", 0);
+        languageValue = PlayerPrefs.GetInt("Language");
         DefaultLocale();
     }
 
